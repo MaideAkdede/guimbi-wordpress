@@ -18,13 +18,6 @@ module.exports = {
             "family-bold": ["Biryani Bold"],
             "family-black": ["Biryani Black"],
         },
-        deliciousHamburgers: {
-            size: '30px', // must be in px.
-            color: '#FFFFFF',
-            colorLight: '#fff8f4',
-            padding: '0px', // must be in px.
-            animationSpeed: 1,
-        },
         container: {
             padding: {
                 DEFAULT: '1rem',
@@ -36,9 +29,11 @@ module.exports = {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
             backgroundImage: {
                 'hero-texture': "url('../images/texture/african-texture.png')",
+                'hero-desktop': "url('../images/texture/hero-desktop.svg')",
                 'footer': "url('../images/texture/footer.svg')",
                 'menu-texture': "url('../images/texture/menu.svg')",
             },
+
             height: {
                 'toggle-button': '112px',
                 '2px': '2px',
@@ -60,6 +55,7 @@ module.exports = {
             fontSize: {
                 'size-fontawesome': '1.1875rem',
                 'hero-title': '1.4375rem',
+                '13px': '0.8125rem',
                 '15px': '0.9375rem',
                 '26px': '1.625rem',
                 'tag': '0.625rem',
@@ -102,6 +98,7 @@ module.exports = {
             },
             gridTemplateColumns: {
                 'md-actu': '1fr 2fr',
+                '2-auto-1fr': 'auto 1fr',
                 'md-footer': 'minmax(40px, auto) 1fr',
             },
             boxShadow: {
@@ -109,6 +106,8 @@ module.exports = {
             }
         },
         screens: {
+            'xxs': '280px',
+            'xs': '360px',
             'sm': '640px',
             'md': '768px',
             'lg': tailpress.theme('settings.layout.contentSize', theme),

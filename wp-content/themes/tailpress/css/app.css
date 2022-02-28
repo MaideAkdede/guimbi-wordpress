@@ -474,6 +474,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1rem;
 }
 
+@media (min-width: 280px) {
+  .container {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 360px) {
+  .container {
+    max-width: 360px;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -522,11 +534,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .c-hamburger--apple.active > .c-hamburger-inner {
   transform: rotate(90deg) translate3d(1px, -1px, 0);
-  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.175s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--apple.active span.c-hamburger-bar {
-  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
+  transition: transform 0.175s cubic-bezier(0.645, 0.045, 0.355, 1) 0.075s;
 }
 
 .c-hamburger--apple.active span.c-hamburger-bar:nth-child(1) {
@@ -546,15 +558,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--arrow.active span.c-hamburger-bar:nth-child(1), .c-hamburger--arrow-right.active span.c-hamburger-bar:nth-child(1) {
-  transform: rotate(45deg) scaleX(0.4) translate3d(12.374368670764579px, 4.949747468305832px, 0);
+  transform: rotate(45deg) scaleX(0.4) translate3d(19.445436482630054px, 7.778174593052022px, 0);
 }
 
 .c-hamburger--arrow.active span.c-hamburger-bar:nth-child(2), .c-hamburger--arrow-right.active span.c-hamburger-bar:nth-child(2) {
-  transform: scaleX(0.9333333333333333);
+  transform: scaleX(0.95);
 }
 
 .c-hamburger--arrow.active span.c-hamburger-bar:nth-child(3), .c-hamburger--arrow-right.active span.c-hamburger-bar:nth-child(3) {
-  transform: rotate(-45deg) scaleX(0.4) translate3d(12.374368670764579px, -4.949747468305832px, 0);
+  transform: rotate(-45deg) scaleX(0.4) translate3d(19.445436482630054px, -7.778174593052022px, 0);
 }
 
 .c-hamburger--arrow-right.active > .c-hamburger-inner {
@@ -562,15 +574,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--arrow-right.active span.c-hamburger-bar:nth-child(1) {
-  transform: rotate(-45deg) scaleX(0.4) translate3d(-12.374368670764579px, 4.949747468305832px, 0);
+  transform: rotate(-45deg) scaleX(0.4) translate3d(-19.445436482630054px, 7.778174593052022px, 0);
 }
 
 .c-hamburger--arrow-right.active span.c-hamburger-bar:nth-child(2) {
-  transform: scaleX(0.9333333333333333);
+  transform: scaleX(0.95);
 }
 
 .c-hamburger--arrow-right.active span.c-hamburger-bar:nth-child(3) {
-  transform: rotate(45deg) scaleX(0.4) translate3d(-12.374368670764579px, -4.949747468305832px, 0);
+  transform: rotate(45deg) scaleX(0.4) translate3d(-19.445436482630054px, -7.778174593052022px, 0);
 }
 
 .c-hamburger--chop.active span.c-hamburger-bar {
@@ -591,8 +603,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--collapse.active span.c-hamburger-bar {
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
-            opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.125s cubic-bezier(0.645, 0.045, 0.355, 1),
+            opacity 0.125s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--collapse.active span.c-hamburger-bar:nth-child(1), .c-hamburger--collapse.active span.c-hamburger-bar:nth-child(3) {
@@ -600,8 +612,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--collapse.active span.c-hamburger-bar:nth-child(1)::before, .c-hamburger--collapse.active span.c-hamburger-bar:nth-child(3)::before {
-  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s,
-                  background 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
+  transition: transform 0.175s cubic-bezier(0.645, 0.045, 0.355, 1) 0.075s,
+                  background 0.175s cubic-bezier(0.645, 0.045, 0.355, 1) 0.075s;
 }
 
 .c-hamburger--collapse.active span.c-hamburger-bar:nth-child(1)::before {
@@ -638,13 +650,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--criss-cross.active > .c-hamburger-inner::before {
-  transform: rotate(45deg) translate3d(-4.3933982822017885px, -10.606601717798211px, 0);
-  transition-delay: 0.4s;
+  transform: rotate(45deg) translate3d(-5.857864376269051px, -14.14213562373095px, 0);
+  transition-delay: 0.2s;
 }
 
 .c-hamburger--criss-cross.active > .c-hamburger-inner::after {
-  transform: rotate(-45deg) translate3d(-4.3933982822017885px, 10.606601717798211px, 0);
-  transition-delay: 0.5s;
+  transform: rotate(-45deg) translate3d(-5.857864376269051px, 14.14213562373095px, 0);
+  transition-delay: 0.25s;
 }
 
 .c-hamburger--criss-cross.active span.c-hamburger-bar {
@@ -658,11 +670,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--criss-cross.active span.c-hamburger-bar:nth-child(2) {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .c-hamburger--criss-cross.active span.c-hamburger-bar:nth-child(3) {
-  transition-delay: 0.1s;
+  transition-delay: 0.05s;
 }
 
 .c-hamburger--default.active span.c-hamburger-bar {
@@ -690,15 +702,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--flatten.active span.c-hamburger-bar:nth-child(1) {
-  transform: translate3d(0, 6px, 0);
+  transform: translate3d(0, 10px, 0);
 }
 
 .c-hamburger--flatten.active span.c-hamburger-bar:nth-child(3) {
-  transform: translate3d(0, -6px, 0);
+  transform: translate3d(0, -10px, 0);
 }
 
 .c-hamburger--magnetic.active span.c-hamburger-bar {
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--magnetic.active span.c-hamburger-bar:nth-child(1), .c-hamburger--magnetic.active span.c-hamburger-bar:nth-child(2) {
@@ -706,7 +718,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--magnetic.active span.c-hamburger-bar:nth-child(1)::before, .c-hamburger--magnetic.active span.c-hamburger-bar:nth-child(2)::before {
-  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--magnetic.active span.c-hamburger-bar:nth-child(1)::before {
@@ -718,23 +730,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--minimal.active span.c-hamburger-bar {
-  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1),
-            opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),
+            opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--minimal.active span.c-hamburger-bar:nth-child(1) {
-  transform: translate3d(0, 5px, 0);
+  transform: translate3d(0, 8px, 0);
 }
 
 .c-hamburger--minimal.active span.c-hamburger-bar:nth-child(2) {
   opacity: 0;
-  transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -8px, 0);
 }
 
 .c-hamburger--parallel.active span.c-hamburger-bar {
   top: 0;
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-            top 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+            top 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--parallel.active span.c-hamburger-bar:nth-child(1) {
@@ -746,12 +758,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--push.active > .c-hamburger-inner {
-  transform: translate3d(0, 33px, 0);
+  transform: translate3d(0, 55.00000000000001px, 0);
 }
 
 .c-hamburger--shelf.active span.c-hamburger-bar {
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-                    opacity 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+                    opacity 0.1 cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--shelf.active span.c-hamburger-bar:nth-child(1) {
@@ -764,7 +776,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--shelf.active span.c-hamburger-bar:nth-child(3) {
-  transform: rotate(-45deg) translate3d(-4.3933982822017885px, 10.606601717798211px, 0);
+  transform: rotate(-45deg) translate3d(-5.857864376269051px, 14.14213562373095px, 0);
 }
 
 .c-hamburger--simple.active span.c-hamburger-bar:nth-child(1) {
@@ -780,12 +792,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--spin.active span.c-hamburger-bar {
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s,
-                    opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s,
+                    opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--spin.active span.c-hamburger-bar:nth-child(1) {
-  transform: rotate(135deg) translate3d(-5.121320343559641px, -2.121320343559642px, 0);
+  transform: rotate(135deg) translate3d(-6.828427124746188px, -2.8284271247461894px, 0);
 }
 
 .c-hamburger--spin.active span.c-hamburger-bar:nth-child(2) {
@@ -794,12 +806,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--spin.active span.c-hamburger-bar:nth-child(3) {
-  transform: rotate(45deg) translate3d(-0.8786796564403572px, -2.121320343559642px, 0);
+  transform: rotate(45deg) translate3d(-1.1715728752538097px, -2.8284271247461894px, 0);
 }
 
 .c-hamburger--stack.active span.c-hamburger-bar {
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
-                    opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.125s cubic-bezier(0.645, 0.045, 0.355, 1),
+                    opacity 0.125s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .c-hamburger--stack.active span.c-hamburger-bar:nth-child(1), .c-hamburger--stack.active span.c-hamburger-bar:nth-child(3) {
@@ -807,7 +819,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--stack.active span.c-hamburger-bar:nth-child(1)::before, .c-hamburger--stack.active span.c-hamburger-bar:nth-child(3)::before {
-  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
+  transition: transform 0.175s cubic-bezier(0.645, 0.045, 0.355, 1) 0.075s;
 }
 
 .c-hamburger--stack.active span.c-hamburger-bar:nth-child(1)::before {
@@ -832,24 +844,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .c-hamburger--twist.active span.c-hamburger-bar:nth-child(3) {
-  transform: rotate(-225deg) translate3d(-5.121320343559641px, -2.121320343559642px, 0);
+  transform: rotate(-225deg) translate3d(-6.828427124746188px, -2.8284271247461894px, 0);
 }
 
 .c-hamburger--vertical.active > .c-hamburger-inner {
   transform: rotate(90deg) translate3d(1px, -1px, 0);
-  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .c-hamburger--vertical.active span.c-hamburger-bar {
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
 }
 
 .c-hamburger--vertical.active span.c-hamburger-bar:nth-child(1) {
-  transform: rotate(-45deg) translate3d(-15.37689398770626px, 37.12310601229374px, 0);
+  transform: rotate(-45deg) translate3d(-20.50252531694168px, 49.49747468305832px, 0);
 }
 
 .c-hamburger--vertical.active span.c-hamburger-bar:nth-child(2) {
-  transform: rotate(45deg) translate3d(-15.37689398770626px, -37.12310601229374px, 0);
+  transform: rotate(45deg) translate3d(-20.50252531694168px, -49.49747468305832px, 0);
 }
 
 .sr-only {
@@ -911,6 +923,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bottom-0 {
   bottom: 0px;
+}
+
+.bottom-80 {
+  bottom: 20rem;
+}
+
+.bottom-24 {
+  bottom: 6rem;
 }
 
 .z-2 {
@@ -979,9 +999,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.75rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .mx-5 {
@@ -992,11 +1012,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .mb-6 {
@@ -1015,8 +1030,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .mr-3 {
@@ -1049,10 +1064,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-b-hero-title {
   margin-bottom: 1.125rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 
 .mb-1\.5 {
@@ -1215,6 +1226,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2rem;
 }
 
+.w-\[60px\] {
+  width: 60px;
+}
+
 .max-w-max {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -1268,6 +1283,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-\[247px\] {
+  --tw-translate-x: 247px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[223px\] {
+  --tw-translate-x: 223px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-45 {
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1278,16 +1303,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-rotate-90 {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.resize {
-  resize: both;
 }
 
 .list-disc {
@@ -1305,6 +1336,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2-auto-1fr {
+  grid-template-columns: auto 1fr;
 }
 
 .flex-col {
@@ -1448,6 +1483,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(179 121 83 / var(--tw-border-opacity));
 }
 
+.border-neutral-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(115 115 115 / var(--tw-border-opacity));
+}
+
+.border-white\/30 {
+  border-color: rgb(255 255 255 / 0.3);
+}
+
 .border-opacity-30 {
   --tw-border-opacity: 0.3;
 }
@@ -1504,6 +1548,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-white\/0 {
+  background-color: rgb(255 255 255 / 0);
+}
+
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -1514,10 +1562,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-hero-texture {
   background-image: url('../images/texture/african-texture.png');
-}
-
-.bg-menu-texture {
-  background-image: url('../images/texture/menu.svg');
 }
 
 .bg-cover {
@@ -1552,6 +1596,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-4 {
@@ -1609,12 +1661,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
 
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .pb-8 {
@@ -1647,6 +1713,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-12 {
   padding-bottom: 3rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .text-left {
@@ -1729,6 +1799,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-pub {
   font-size: 1.5625rem;
+}
+
+.text-13px {
+  font-size: 0.8125rem;
 }
 
 .font-bold {
@@ -1843,6 +1917,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(70 70 70 / var(--tw-text-opacity));
 }
 
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
 .text-opacity-50 {
   --tw-text-opacity: 0.5;
 }
@@ -1901,6 +1980,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 .ease-in-out {
@@ -51942,6 +52025,8 @@ a#primary-menu-toggle div.toggle-logo {
   height: auto;
 }
 
+/* Link in menu */
+
 .menu-link {
   display: inline-block;
   width: 100%;
@@ -52006,6 +52091,13 @@ li:last-of-type a.menu-link:hover {
 li:first-of-type a.menu-link {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+/* ACTIVE HEADER*/
+
+header.active-header {
+  min-height: 100vh;
+  background-image: url('../images/texture/menu.svg');
 }
 
 .tag {
@@ -52079,6 +52171,15 @@ li:first-of-type a.menu-link {
   background: linear-gradient(#ffffff 75%, #F1F2EB 25%);
 }
 
+/* FIXED MEDIA HOVER */
+
+.fixed-media:hover button span i {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  padding-bottom: 0px;
+  padding-top: 0.5rem;
+}
+
 /* OWL CAROUSEL */
 
 .owl-carousel.owl-theme.owl-date.owl-drag {
@@ -52097,7 +52198,7 @@ li:first-of-type a.menu-link {
   --tw-gradient-from: #fff;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
   content: var(--tw-content);
-  --tw-gradient-to: transparent;
+  --tw-gradient-to: rgb(255 255 255 / 0);
 }
 
 .owl-carousel.owl-theme.owl-date.owl-drag::after {
@@ -52111,7 +52212,7 @@ li:first-of-type a.menu-link {
   --tw-gradient-from: #fff;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
   content: var(--tw-content);
-  --tw-gradient-to: transparent;
+  --tw-gradient-to: rgb(255 255 255 / 0);
 }
 
 .owl-date a:hover time {
@@ -52282,6 +52383,21 @@ li:first-of-type a.menu-link {
 }
 */
 
+.placeholder\:text-neutral-500::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-neutral-500:-ms-input-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-neutral-500::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -52339,9 +52455,9 @@ li:first-of-type a.menu-link {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
 }
 
-.before\:to-transparent::before {
+.before\:to-white\/0::before {
   content: var(--tw-content);
-  --tw-gradient-to: transparent;
+  --tw-gradient-to: rgb(255 255 255 / 0);
 }
 
 .after\:absolute::after {
@@ -52359,6 +52475,11 @@ li:first-of-type a.menu-link {
   right: 0px;
 }
 
+.after\:-left-\[30\%\]::after {
+  content: var(--tw-content);
+  left: -30%;
+}
+
 .after\:-z-1::after {
   content: var(--tw-content);
   z-index: -1;
@@ -52373,6 +52494,11 @@ li:first-of-type a.menu-link {
 .after\:block::after {
   content: var(--tw-content);
   display: block;
+}
+
+.after\:hidden::after {
+  content: var(--tw-content);
+  display: none;
 }
 
 .after\:h-\[6px\]::after {
@@ -52433,9 +52559,24 @@ li:first-of-type a.menu-link {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
 }
 
-.after\:to-transparent::after {
+.after\:to-white\/0::after {
   content: var(--tw-content);
-  --tw-gradient-to: transparent;
+  --tw-gradient-to: rgb(255 255 255 / 0);
+}
+
+.after\:bg-contain::after {
+  content: var(--tw-content);
+  background-size: contain;
+}
+
+.after\:bg-center::after {
+  content: var(--tw-content);
+  background-position: center;
+}
+
+.after\:bg-no-repeat::after {
+  content: var(--tw-content);
+  background-repeat: no-repeat;
 }
 
 .after\:opacity-15::after {
@@ -52445,6 +52586,11 @@ li:first-of-type a.menu-link {
 
 .last\:border-none:last-child {
   border-style: none;
+}
+
+.hover\:translate-x-0:hover {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:border-2px:hover {
@@ -52514,6 +52660,10 @@ li:first-of-type a.menu-link {
 
 .focus\:border-2px:focus {
   border-width: 2px;
+}
+
+.focus\:border-b-2px:focus {
+  border-bottom-width: 2px;
 }
 
 .focus\:border-primary:focus {
@@ -52604,7 +52754,29 @@ li:first-of-type a.menu-link {
   color: rgb(104 111 66 / var(--tw-text-opacity));
 }
 
+@media (min-width: 280px) {
+  .xxs\:p-1 {
+    padding: 0.25rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .xs\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .xs\:p-2 {
+    padding: 0.5rem;
+  }
+}
+
 @media (min-width: 640px) {
+  .sm\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .sm\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -52625,11 +52797,19 @@ li:first-of-type a.menu-link {
   .sm\:gap-5 {
     gap: 1.25rem;
   }
+
+  .sm\:p-4 {
+    padding: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
   .md\:static {
     position: static;
+  }
+
+  .md\:fixed {
+    position: fixed;
   }
 
   .md\:top-0 {
@@ -52641,18 +52821,26 @@ li:first-of-type a.menu-link {
     margin-bottom: 1.5rem;
   }
 
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:my-auto {
     margin-top: auto;
     margin-bottom: auto;
   }
 
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .md\:mb-16 {
     margin-bottom: 4rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:grid {
@@ -52709,6 +52897,14 @@ li:first-of-type a.menu-link {
     gap: 2.5rem;
   }
 
+  .md\:rounded-none {
+    border-radius: 0px;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
+  }
+
   .md\:pt-14 {
     padding-top: 3.5rem;
   }
@@ -52736,16 +52932,16 @@ li:first-of-type a.menu-link {
     line-height: 1.5rem;
   }
 
-  .md\:text-\[42px\] {
-    font-size: 42px;
-  }
-
   .md\:text-\[2\.625rem\] {
     font-size: 2.625rem;
   }
 }
 
 @media (min-width: 1024px) {
+  .lg\:z-2 {
+    z-index: 2;
+  }
+
   .lg\:-mx-4 {
     margin-left: -1rem;
     margin-right: -1rem;
@@ -52754,16 +52950,6 @@ li:first-of-type a.menu-link {
   .lg\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-
-  .lg\:my-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .lg\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .lg\:ml-10 {
@@ -52790,6 +52976,10 @@ li:first-of-type a.menu-link {
     display: grid;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -52806,6 +52996,18 @@ li:first-of-type a.menu-link {
     border-style: none;
   }
 
+  .lg\:bg-inherit {
+    background-color: inherit;
+  }
+
+  .lg\:p-2\.5 {
+    padding: 0.625rem;
+  }
+
+  .lg\:p-2 {
+    padding: 0.5rem;
+  }
+
   .lg\:p-0 {
     padding: 0px;
   }
@@ -52818,6 +53020,16 @@ li:first-of-type a.menu-link {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:after\:block::after {
+    content: var(--tw-content);
+    display: block;
+  }
+
+  .lg\:after\:bg-hero-desktop::after {
+    content: var(--tw-content);
+    background-image: url('../images/texture/hero-desktop.svg');
   }
 }
 
@@ -52890,5 +53102,20 @@ li:first-of-type a.menu-link {
 
   .xxl\:p-0 {
     padding: 0px;
+  }
+
+  .xxl\:after\:-left-0::after {
+    content: var(--tw-content);
+    left: -0px;
+  }
+
+  .xxl\:after\:w-1\/2::after {
+    content: var(--tw-content);
+    width: 50%;
+  }
+
+  .xxl\:after\:bg-cover::after {
+    content: var(--tw-content);
+    background-size: cover;
   }
 }
