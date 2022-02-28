@@ -1,0 +1,32 @@
+@import "../../node_modules/@fortawesome/fontawesome-pro/css/fontawesome.css";
+@import "../../node_modules/@fortawesome/fontawesome-pro/css/all.css";
+@font-face {
+    font-family: 'Biryani Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/biryani/Biryani-Regular.ttf') format('truetype'),
+    url('../fonts/biryani/Biryani-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Biryani SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/biryani/Biryani-SemiBold.ttf') format('truetype'),
+    url('../fonts/biryani/Biryani-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Biryani Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/biryani/Biryani-Bold.ttf') format('truetype'),
+    url('../fonts/biryani/Biryani-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Biryani Black';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/biryani/Biryani-Black.ttf') format('truetype');
+}
