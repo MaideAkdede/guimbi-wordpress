@@ -7772,25 +7772,6 @@
   // resources/js/parts/owl-carousel.js
   var owl_carousel_exports = {};
   __markAsModule(owl_carousel_exports);
-  function postsCarousel() {
-    var checkWidth = $(window).width();
-    var owlPost = $(".carousel-actu");
-    if (checkWidth > 767) {
-      if (typeof owlPost.data("owl.carousel") != "undefined") {
-        owlPost.data("owl.carousel").destroy();
-      }
-      owlPost.removeClass("owl-carousel-regular owl-carousel owl-theme");
-    } else if (checkWidth < 768) {
-      owlPost.addClass("owl-carousel-regular owl-carousel owl-theme");
-      owlPost.owlCarousel({
-        items: 1,
-        loop: true,
-        nav: true,
-        dots: false,
-        navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"]
-      });
-    }
-  }
   var import_jquery;
   var init_owl_carousel = __esm({
     "resources/js/parts/owl-carousel.js"() {
@@ -7847,8 +7828,29 @@
           }
         });
       });
-      postsCarousel();
-      $(window).resize(postsCarousel);
+      window.addEventListener("load", function() {
+        function postsCarousel() {
+          var checkWidth = $(window).width();
+          var owlPost = $(".carousel-actu");
+          if (checkWidth > 767) {
+            if (typeof owlPost.data("owl.carousel") != "undefined") {
+              owlPost.data("owl.carousel").destroy();
+            }
+            owlPost.removeClass("owl-carousel-regular owl-carousel owl-theme");
+          } else if (checkWidth < 768) {
+            owlPost.addClass("owl-carousel-regular owl-carousel owl-theme");
+            owlPost.owlCarousel({
+              items: 1,
+              loop: true,
+              nav: true,
+              dots: false,
+              navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"]
+            });
+          }
+        }
+        postsCarousel();
+        $(window).resize(postsCarousel);
+      });
     }
   });
 
@@ -7865,10 +7867,7 @@
       toggle_menu.classList.toggle("close-menu");
       toggle_menu.classList.toggle("open-menu");
       toggle_logo.classList.toggle("toggle-logo");
-      document.querySelector("header").classList.toggle("min-h-screen");
-      document.querySelector("header").classList.toggle("bg-menu-texture");
-    });
-    document.addEventListener("resize", () => {
+      document.querySelector("header").classList.toggle("active-header");
     });
   });
 })();

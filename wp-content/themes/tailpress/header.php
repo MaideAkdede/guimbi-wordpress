@@ -37,10 +37,10 @@
                     <?php } ?>
                 </div>
                 <div class="flex items-center xxl:hidden">
-                    <div class="text-white text-size-fontawesome mx-4">
-                        <a href="" class="border-r border-dark-secondary p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="" class="border-r border-dark-secondary p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-instagram"></i></a>
-                        <a href="" class="p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-twitter"></i></a>
+                    <div class="text-white text-size-fontawesome mx-1 xs:mx-2 sm:mx-4">
+                        <a href="" class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-twitter"></i></a>
                     </div>
                     <a href="#" aria-label="Toggle navigation" id="primary-menu-toggle"
                        class="open-menu bg-primary block flex transition hover:bg-primary-dark">

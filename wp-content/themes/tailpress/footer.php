@@ -23,7 +23,7 @@
             </svg>
             <div class="">
                 <div class="mb-8 pb-8 border-b border-dark lg:border-none max-w-max mx-auto">
-                    <h2 class="mb-10 text-white uppercase font-semibold font-family-semi max-w-42ch leading-loose">
+                    <h2 class="mb-5 md:mb-10 text-white uppercase font-semibold font-family-semi max-w-42ch leading-loose">
                         Association de soutien <span class="sr-only">du cinéma au Burkina Faso</span><br> du cinéma au
                         Burkina Faso (<abbr title="Association de soutien du cinéma au burkina faso">ASCBF</abbr>)</h2>
                     <address class="mb-6 not-italic"><i class="fa-solid fa-location-dot text-primary mr-3"></i> BP 415
@@ -34,11 +34,11 @@
                                 class="fa-solid fa-envelope text-primary mr-3"></i>contact@cineguimbi.org</a>
                 </div>
                 <div class="my-8">
-                    <a href="" class="p-4 md:pl-0 text-footer-social hover:text-white"><i
+                    <a href="" class="p-4 lg:p-2.5 md:pl-0 text-footer-social hover:text-white"><i
                                 class="fa-brands fa-facebook-f"></i></a>
-                    <a href="" class="p-4 text-footer-social hover:text-white"><i
+                    <a href="" class="p-4 lg:p-2.5 text-footer-social hover:text-white"><i
                                 class="fa-brands fa-instagram"></i></a>
-                    <a href="" class="p-4 text-footer-social hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="p-4 lg:p-2.5 text-footer-social hover:text-white"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
         </div>

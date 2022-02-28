@@ -1,15 +1,22 @@
-<svg style="opacity:0.1" id="Groupe_122" data-name="Groupe 122" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.481" height="148.962" viewBox="0 0 74.481 148.962">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="169" viewBox="0 0 86 169">
   <defs>
     <clipPath id="clip-path">
+      <rect id="Rectangle_78" data-name="Rectangle 78" width="86" height="169" transform="translate(0 5593)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
       <path id="Tracé_14" data-name="Tracé 14" d="M0,0H74.481V148.962H0Z" fill="none"/>
     </clipPath>
   </defs>
-  <g id="Groupe_de_masques_1" data-name="Groupe de masques 1" clip-path="url(#clip-path)">
-    <path id="Tracé_8" data-name="Tracé 8" d="M52.986,100.994v37.777c2.525.478,4.913.889,7.077,1.23a8.377,8.377,0,0,0,9.681-8.277V99.132l-16.757,1.862Z" transform="translate(4.735 8.86)" fill="#818a55"/>
-    <path id="Tracé_9" data-name="Tracé 9" d="M9.28,81.844C3.113,87.492,0,94,0,101.348c0,12.618,9.205,22.831,27.361,30.359a152.9,152.9,0,0,0,27.1,7.965V122.536c-15-3.368-26.467-7.967-32.633-12.966-3.767-2.713-14.956-12.2-12.551-27.727" transform="translate(0 7.315)" fill="#a5884e"/>
-    <path id="Tracé_10" data-name="Tracé 10" d="M72.646,61.761a206.968,206.968,0,0,0-34.625,6.923Q21.872,73.527,12.376,80.338a23.757,23.757,0,0,0,3.489,21.669C16.974,95.929,26.8,89.571,42.642,84.795A192.946,192.946,0,0,1,73.481,78.53V61.677Z" transform="translate(1.001 5.512)" fill="#b37953"/>
-    <path id="Tracé_11" data-name="Tracé 11" d="M32.549,25.34C36.5,21.377,45.064,17.658,56.66,14.924V1.555c-19.683,4.176-39.567,12.4-39.567,28.609,0,5.81,2.565,10.926,7.651,15.323C23.4,35.424,28.972,28.6,32.549,25.34" transform="translate(1.528 0.139)" fill="#657f8d"/>
-    <path id="Tracé_12" data-name="Tracé 12" d="M29.828,29.984a18.875,18.875,0,0,0-1.939,15.959A69.551,69.551,0,0,0,45.527,53.6a154.816,154.816,0,0,0,25.9,5.177l.649.065V45.738c-16.537-1.769-38.433-7.951-42.244-15.755" transform="translate(2.41 2.68)" fill="#818a55"/>
-    <path id="Tracé_13" data-name="Tracé 13" d="M56.4,29.781l13.033,1.863V6.517A6.515,6.515,0,0,0,61.9.081c-1.807.288-3.645.606-5.494.959V29.781Z" transform="translate(5.041 0)" fill="#a5884e"/>
+  <g id="Groupe_de_masques_7" data-name="Groupe de masques 7" transform="translate(0 -5593)" opacity="0.14" clip-path="url(#clip-path)">
+    <g id="Groupe_144" data-name="Groupe 144" transform="translate(0 5593.528)">
+      <g id="Groupe_de_masques_1" data-name="Groupe de masques 1" clip-path="url(#clip-path-2)">
+        <path id="Tracé_8" data-name="Tracé 8" d="M52.986,100.994v37.777c2.525.478,4.913.889,7.077,1.23a8.377,8.377,0,0,0,9.681-8.277V99.132l-16.757,1.862Z" transform="translate(4.735 8.86)" fill="#818a55"/>
+        <path id="Tracé_9" data-name="Tracé 9" d="M9.28,81.844C3.113,87.492,0,94,0,101.348c0,12.618,9.205,22.831,27.361,30.359a152.9,152.9,0,0,0,27.1,7.965V122.536c-15-3.368-26.467-7.967-32.633-12.966-3.767-2.713-14.956-12.2-12.551-27.727" transform="translate(0 7.315)" fill="#a5884e"/>
+        <path id="Tracé_10" data-name="Tracé 10" d="M72.646,61.761a206.968,206.968,0,0,0-34.625,6.923Q21.872,73.527,12.376,80.338a23.757,23.757,0,0,0,3.489,21.669C16.974,95.929,26.8,89.571,42.642,84.795A192.946,192.946,0,0,1,73.481,78.53V61.677Z" transform="translate(1.001 5.512)" fill="#b37953"/>
+        <path id="Tracé_11" data-name="Tracé 11" d="M32.549,25.34C36.5,21.377,45.064,17.658,56.66,14.924V1.555c-19.683,4.176-39.567,12.4-39.567,28.609,0,5.81,2.565,10.926,7.651,15.323C23.4,35.424,28.972,28.6,32.549,25.34" transform="translate(1.528 0.139)" fill="#657f8d"/>
+        <path id="Tracé_12" data-name="Tracé 12" d="M29.828,29.984a18.875,18.875,0,0,0-1.939,15.959A69.551,69.551,0,0,0,45.527,53.6a154.816,154.816,0,0,0,25.9,5.177l.649.065V45.738c-16.537-1.769-38.433-7.951-42.244-15.755" transform="translate(2.41 2.68)" fill="#818a55"/>
+        <path id="Tracé_13" data-name="Tracé 13" d="M56.4,29.781l13.033,1.863V6.517A6.515,6.515,0,0,0,61.9.081c-1.807.288-3.645.606-5.494.959V29.781Z" transform="translate(5.041 0)" fill="#a5884e"/>
+      </g>
+    </g>
   </g>
 </svg>

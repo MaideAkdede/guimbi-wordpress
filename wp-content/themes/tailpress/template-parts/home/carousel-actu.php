@@ -1,6 +1,6 @@
 <section class="py-12 relative">
     <h1 class="underline-title">Actualités</h1>
-    <div class="max-w-xxl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-5 carousel-actu owl-carousel-regular owl-carousel owl-theme">
+    <div class="max-w-xxl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-5 carousel-actu">
         <?php for ($x = 1; $x <= 4; $x++): ?>
             <article class="text-center font-bold font-family-bold relative aspect-card-long drop-shadow-md md:aspect-auto md:grid md:grid-cols-md-actu md:text-left">
                 <img class="h-full w-full object-cover" src="<?= get_template_directory_uri() . '/resources/images/event/'.$x.'.png' ?>" alt="">

@@ -31,6 +31,7 @@ body {
 a#primary-menu-toggle div.toggle-logo {
     @apply h-auto;
 }
+/* Link in menu */
 .menu-link {
     @apply inline-block w-full p-5 border-b border-dark hover:border-white hover:text-secondary focus:text-secondary active:text-primary-dark xxl:border-b-0 xxl:border-r xxl:p-[1.5625rem] xxl:my-0;
 }
@@ -39,6 +40,10 @@ li:last-of-type a.menu-link{
 }
 li:first-of-type a.menu-link{
     @apply px-0;
+}
+/* ACTIVE HEADER*/
+header.active-header{
+    @apply min-h-screen bg-menu-texture;
 }
 .tag {
     @apply max-w-max bg-primary pt-2 pb-1 px-4 uppercase text-white text-xs font-bold font-family-bold;
@@ -59,9 +64,13 @@ li:first-of-type a.menu-link{
 .colored-box {
     background: linear-gradient(#ffffff 75%, #F1F2EB 25%);
 }
+/* FIXED MEDIA HOVER */
+.fixed-media:hover button span i {
+    @apply rotate-180 pb-0 pt-2;
+}
 /* OWL CAROUSEL */
 .owl-carousel.owl-theme.owl-date.owl-drag{
-    @apply relative after:absolute after:block after:h-full after:top-0 after:right-0 after:w-[100px] after:bg-gradient-to-l after:from-white after:to-transparent before:absolute before:block before:h-full before:top-0 before:left-0 before:w-[100px] before:bg-gradient-to-r before:from-white before:to-transparent before:z-1;
+    @apply relative after:absolute after:block after:h-full after:top-0 after:right-0 after:w-[100px] after:bg-gradient-to-l after:from-white after:to-white/0 before:absolute before:block before:h-full before:top-0 before:left-0 before:w-[100px] before:bg-gradient-to-r before:from-white before:to-white/0 before:z-1;
 }
 .owl-date a:hover time {
     @apply border border-primary border-opacity-30;
