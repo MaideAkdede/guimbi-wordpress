@@ -17,10 +17,10 @@
 
     <?php do_action('tailpress_header'); ?>
 
-    <header class="bg-black overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-screen overflow-y-scroll">
+    <header class="bg-black overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-screen overflow-y-scroll xxl:overflow-visible">
         <div class="mx-auto max-w-xxl">
             <div class="flex justify-between items-center">
-                <div class="px-5 xxl:my-10 xxl:mx-auto h-[50px] w-[138px] md:h-[85px] md:w-[233px]">
+                <div class="px-5 xxl:my-10 xxl:mx-auto h-logo-sm w-logo-sm md:h-logo-md md:w-logo-md">
                     <?php if (has_custom_logo()) { ?>
                         <?php the_custom_logo(); ?>
                     <?php } else { ?>
@@ -38,9 +38,15 @@
                 </div>
                 <div class="flex items-center xxl:hidden">
                     <div class="text-white text-size-fontawesome mx-1 xs:mx-2 sm:mx-4">
-                        <a href="" class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="" class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-instagram"></i></a>
-                        <a href="" class="p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark" ><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""
+                           class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""
+                           class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        <a href=""
+                           class="p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark"><i
+                                    class="fa-brands fa-twitter"></i></a>
                     </div>
                     <a href="#" aria-label="Toggle navigation" id="primary-menu-toggle"
                        class="open-menu bg-primary block flex transition hover:bg-primary-dark">
@@ -55,7 +61,7 @@
             </div>
             <div class="xxl:flex xxl:items-center xxl:flex-wrap">
                 <ul id="primary-menu"
-                    class="py-5 hidden text-white text-center max-w-[80vw] mx-auto text-sm uppercase tracking-widest xxl:block xxl:flex xxl:flex-wrap xxl:justify-center xxl:max-w-xxl xxl:p-0">
+                    class="py-5 hidden text-white text-center text-sm uppercase tracking-widest xxl:block xxl:flex xxl:flex-wrap xxl:justify-center xxl:max-w-xxl xxl:p-0">
                     <li class="hidden xxl:block">
                         <a href=""
                            class="menu-link border-none hover:fill-primary-dark <?php if (is_front_page()): ?> fill-primary <?php else: ?> fill-white <?php endif; ?>">
@@ -83,12 +89,12 @@
                         <a href="" class="menu-link">Agenda</a>
                     </li>
                     <li class="">
-                        <a href="" class="menu-link">Tous les films</a></li>
+                        <a href="" class="menu-link ">Tous les films</a></li>
                     <li class="">
-                        <a href="" class="menu-link">Évènements</a>
+                        <a href="" class="menu-link ">Évènements</a>
                     </li>
                     <li class="">
-                        <a href="" class="menu-link">Hub ciné guimbi</a>
+                        <a href="" class="menu-link ">Hub ciné guimbi</a>
                     </li>
                     <li class="">
                         <a href="" class="menu-link">Restaurant</a>
@@ -96,12 +102,16 @@
                     <li class="">
                         <a href="" class="menu-link">Actualités</a>
                     </li>
-                    <li class="">
-                        <a href="" class="menu-link">En pratique</a>
-                        <ul class="sub-menu hidden">
-                            <li class=""><a href="" class="">Tarifs</a></li>
-                            <li class=""><a href="" class="">Nos services</a></li>
-                            <li class=""><a href="" class="">Nous trouver</a></li>
+                    <li class="xxl:relative xxl:overflow-visible">
+                        <a href="" class="menu-link sub relative">
+                            En pratique
+                            <i class="xxl:hidden text-primary text-15px fa-regular fa-angle-down absolute top-1/2 right-0 -translate-y-1/2"></i>
+                        </a>
+                        <ul class="sub-menu hidden xxl:absolute xxl:top-full xxl:w-max xxl:max-w-submenu xxl:text-left normal-case">
+                            <?php for ($x = 1; $x <= 6; $x++): ?>
+                                <li class="border-b border-dark last:border-b-0 border-b-primary-dark xxl:border-b-dark xxl:hover:border-b-dark"><a href="" class="inline-block w-full p-5 xxl:p-25px xxl:my-0 bg-primary hover:bg-primary-dark  xxl:bg-black xxl:hover:bg-black xxl:hover:border-l-8 xxl:hover:border-l-primary ">Engagement de
+                                        l‘égalité femmes-hommes</a></li>
+                            <?php endfor; ?>
                         </ul>
                     </li>
                     <li class="">
@@ -109,9 +119,12 @@
                     </li>
                 </ul>
                 <div class="hidden xxl:block text-white text-size-fontawesome mx-5">
-                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark"><i
+                                class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
             <!-- --><?php

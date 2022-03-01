@@ -33,7 +33,7 @@ a#primary-menu-toggle div.toggle-logo {
 }
 /* Link in menu */
 .menu-link {
-    @apply inline-block w-full p-5 border-b border-dark hover:border-white hover:text-secondary focus:text-secondary active:text-primary-dark xxl:border-b-0 xxl:border-r xxl:p-[1.5625rem] xxl:my-0;
+    @apply inline-block max-w-80vw w-full p-5 border-b border-dark hover:border-white hover:text-secondary focus:text-secondary active:text-primary-dark xxl:border-b-0 xxl:border-r xxl:p-[1.5625rem] xxl:my-0;
 }
 li:last-of-type a.menu-link{
     @apply border-b-0 xxl:border-none hover:border-b hover:border-white;

@@ -35,22 +35,35 @@ module.exports = {
             },
 
             height: {
+                'logo-sm':'50px',
+                'logo-md':'85px',
+                'date-carousel':'87px',
                 'toggle-button': '112px',
                 '2px': '2px',
-                'hero': '75vh'
+                'hero': '75vh',
+                'pub':'300px',
+            },
+            minHeight:{
+                'pub':'300px',
             },
             maxHeight: {
                 'support': '53px',
             },
             width: {
+                'logo-sm':'138px',
+                'logo-sm-footer':'40px',
+                'logo-md':'233px',
                 'toggle-button': '91px',
+                'widget-button': '60px',
             },
             maxWidth: {
                 'xxl': '1820px',
                 'title': '16ch',
                 '42ch': '42ch',
+                '80vw': '80vw',
                 'hero-top': '278px',
                 'title-colored': '290px',
+                'submenu': '300px',
             },
             fontSize: {
                 'size-fontawesome': '1.1875rem',
@@ -78,7 +91,10 @@ module.exports = {
             borderRadius: {
                 '4xl': '2.1875rem',
             },
-            translate: {},
+            translate: {
+                'widget-medias':'calc(100% - 60px)',
+                'widget-search':'calc(100% - 60px)',
+            },
             inset: {
                 'hero': '15%',
             },
@@ -94,7 +110,8 @@ module.exports = {
             },
             aspectRatio: {
                 'card': '4 / 6',
-                'card-long': '3 / 5'
+                'card-long': '3 / 5',
+                '3/2':'3 / 2'
             },
             gridTemplateColumns: {
                 'md-actu': '1fr 2fr',
@@ -103,7 +120,7 @@ module.exports = {
             },
             boxShadow: {
                 'custom': '0 0 10px rgba(0, 0, 0, 0.1)',
-            }
+            },
         },
         screens: {
             'xxs': '280px',

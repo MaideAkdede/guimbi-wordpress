@@ -12,7 +12,7 @@
     <?php do_action('tailpress_footer'); ?>
     <div class="lg:grid lg:grid-cols-2 text-sm text-light py-6 md:pt-14 lg:py-20">
         <div class="text-center md:text-left max-w-max mx-auto md:grid md:grid-cols-md-footer md:gap-10">
-            <svg class="mx-auto mb-6 w-[40px] aspect-2/1" xmlns="http://www.w3.org/2000/svg" width="40.368" height="80.735" viewBox="0 0 40.368 80.735">
+            <svg class="mx-auto mb-6 w-logo-sm-footer aspect-2/1" xmlns="http://www.w3.org/2000/svg" width="40.368" height="80.735" viewBox="0 0 40.368 80.735">
                 <path id="Tracé_8" data-name="Tracé 8" d="M52.986,100.141v20.475c1.369.259,2.663.482,3.835.667a4.54,4.54,0,0,0,5.247-4.486V99.132l-9.082,1.009Z" transform="translate(-21.702 -40.602)" fill="#818a55"/>
                 <path id="Tracé_9" data-name="Tracé 9" d="M5.03,81.844C1.687,84.905,0,88.434,0,92.415c0,6.839,4.989,12.374,14.829,16.454a82.87,82.87,0,0,0,14.69,4.317V103.9c-8.13-1.826-14.345-4.318-17.687-7.027-2.042-1.47-8.106-6.61-6.8-15.027" transform="translate(0 -33.521)" fill="#a5884e"/>
                 <path id="Tracé_10" data-name="Tracé 10" d="M44.5,61.722a112.174,112.174,0,0,0-18.766,3.752,47.358,47.358,0,0,0-13.9,6.316,12.876,12.876,0,0,0,1.891,11.744c.6-3.294,5.928-6.74,14.513-9.329a104.574,104.574,0,0,1,16.714-3.4V61.677Z" transform="translate(-4.587 -25.261)" fill="#b37953"/>

@@ -7869,6 +7869,14 @@
       toggle_logo.classList.toggle("toggle-logo");
       document.querySelector("header").classList.toggle("active-header");
     });
+    let toggleSub = document.querySelector(".sub");
+    let toggleArrow = document.querySelector(".sub i");
+    let submenu = document.querySelector(".sub-menu");
+    toggleSub.addEventListener("click", (e) => {
+      e.preventDefault();
+      submenu.classList.toggle("hidden");
+      toggleArrow.classList.toggle("rotate-180");
+    });
   });
 })();
 /*!

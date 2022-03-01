@@ -4,7 +4,7 @@
         <div class="owl-carousel owl-theme owl-date">
             <?php for ($x = 1; $x <= 25; $x++): ?>
                 <a href=""
-                   class="inline-flex items-center justify-center aspect-[3/2] h-[87px] font-bold font-family-bold border-r border-light-secondary text-primary py-2 last:border-none focus:outline-none">
+                   class="inline-flex items-center justify-center aspect-3/2 h-date-carousel font-bold font-family-bold border-r border-light-secondary text-primary py-2 last:border-none focus:outline-none">
                     <time class="flex flex-col items-center justify-center <?php if($x == '2'):?>border border-primary<?php endif;?> rounded-full aspect-square h-full">
                         <span class="uppercase text-xs tracking-widest  text-primary text-opacity-50">Lun</span> <span
                                 class="<?php if($x !== '2'):?>text-26px text-dark-tertiary<?php endif;?> <?php if($x == '2'):?>text-2xl<?php endif;?>">0<?= $x; ?></span></time>
