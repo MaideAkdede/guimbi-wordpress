@@ -1,9 +1,0 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-@import 'owl.carousel/dist/assets/owl.carousel.min.css';
-@import 'owl.carousel/dist/assets/owl.theme.default.min.css';
-
-@import "fonts.css";
-@import "custom.css";

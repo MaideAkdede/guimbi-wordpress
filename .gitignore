@@ -9,8 +9,8 @@
 /wp-content/*
 !/wp-content/themes
 /wp-content/themes/*
-!/wp-content/themes/tailpress
-/wp-content/themes/tailpress/node_modules
-/wp-content/themes/tailpress/.npmrc
-/wp-content/themes/tailpress/.github/
-/wp-content/themes/tailpress/package-lock.json
+!/wp-content/themes/cineguimbi
+/wp-content/themes/cineguimbi/node_modules
+/wp-content/themes/cineguimbi/.npmrc
+/wp-content/themes/cineguimbi/.github/
+/wp-content/themes/cineguimbi/package-lock.json
