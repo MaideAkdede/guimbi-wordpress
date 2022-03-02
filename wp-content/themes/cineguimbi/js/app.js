@@ -7805,8 +7805,25 @@
           items: 1,
           loop: true,
           nav: false,
-          dots: true
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 8e3,
+          onInitialized: startProgressBar,
+          onTranslate: resetProgressBar,
+          onTranslated: startProgressBar
         });
+        function startProgressBar() {
+          $(".slide-progress").css({
+            height: "100%",
+            transition: "height 8000ms"
+          });
+        }
+        function resetProgressBar() {
+          $(".slide-progress").css({
+            height: 0,
+            transition: "height 0s"
+          });
+        }
       });
       $(function() {
         $(".owl-date").owlCarousel({
@@ -7890,12 +7907,26 @@
             this.toggleArrow = document.querySelector(".sub i");
             this.submenu = document.querySelector(".sub-menu");
             this.toggleSub.addEventListener("click", (e) => this.toggle(e));
+            this.toggleSub.addEventListener("mouseover", (e) => this.hover(e));
+            this.submenu.addEventListener("mouseover", (e) => this.hover(e));
+            this.toggleSub.addEventListener("mouseout", (e) => this.remove(e));
+            this.submenu.addEventListener("mouseout", (e) => this.remove(e));
             document.addEventListener("click", (e) => this.bodyClick(e));
           },
           toggle(e) {
             e.preventDefault();
             this.submenu.classList.toggle("hidden");
             this.toggleArrow.classList.toggle("rotate-180");
+          },
+          hover(e) {
+            e.preventDefault();
+            this.submenu.classList.remove("hidden");
+            this.toggleArrow.classList.add("rotate-180");
+          },
+          remove(e) {
+            e.preventDefault();
+            this.submenu.classList.add("hidden");
+            this.toggleArrow.classList.remove("rotate-180");
           },
           bodyClick(e) {
             if (e.target === this.toggleSub || this.toggleSub.contains(e.target)) {
@@ -7917,14 +7948,16 @@
         const FocusSearch = {
           init() {
             this.form = document.querySelector(".search-form");
-            this.input = document.querySelector(".search-form input[name='search']");
-            this.form.addEventListener("mouseover", () => {
-              this.focus();
-            });
-            this.form.addEventListener("mouseout", () => {
-              this.focusOut();
-            });
-            document.addEventListener("click", (e) => this.bodyClick(e));
+            if (this.form != null) {
+              this.input = document.querySelector(".search-form input[name='search']");
+              this.form.addEventListener("mouseover", () => {
+                this.focus();
+              });
+              this.form.addEventListener("mouseout", () => {
+                this.focusOut();
+              });
+              document.addEventListener("click", (e) => this.bodyClick(e));
+            }
           },
           focus() {
             if (this.input === document.activeElement) {

@@ -2,14 +2,16 @@
     const FocusSearch = {
         init() {
             this.form = document.querySelector(".search-form");
-            this.input = document.querySelector(".search-form input[name='search']");
-            this.form.addEventListener('mouseover', () => {
-                this.focus();
-            });
-            this.form.addEventListener('mouseout', () => {
-                this.focusOut();
-            })
-            document.addEventListener('click', (e) => this.bodyClick(e));
+            if(this.form != null){
+                this.input = document.querySelector(".search-form input[name='search']");
+                this.form.addEventListener('mouseover', () => {
+                    this.focus();
+                });
+                this.form.addEventListener('mouseout', () => {
+                    this.focusOut();
+                })
+                document.addEventListener('click', (e) => this.bodyClick(e));
+            }
         },
         focus() {
             if (this.input === document.activeElement) {

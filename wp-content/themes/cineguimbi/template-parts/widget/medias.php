@@ -9,7 +9,7 @@
         <span class="block -rotate-90 leading-none">
             <i class="fa-solid fa-chevron-up pb-2 text-13px text-neutral-500"></i>
             Médias</span></button>
-    <ul class="text-sm bg-primary">
+    <ul class="text-sm bg-primary text-white">
         <?php for ($x = 1; $x <= 4; $x++): ?>
          <li class="border-b border-white/30 last:border-none"><a href="" class="block py-4 px-16 hover:bg-primary-dark">Lien externe <?= $x?></a></li>
         <?php endfor; ?>

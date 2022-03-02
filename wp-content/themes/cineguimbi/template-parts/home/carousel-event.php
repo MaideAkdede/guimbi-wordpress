@@ -1,4 +1,4 @@
-<section class="py-12 colored-box relative">
+<section class="pb-12 colored-box relative">
     <h1 class="underline-title">Évènements</h1>
     <div class="owl-carousel-regular owl-carousel owl-theme max-w-xxl mx-auto">
         <?php for ($x = 1; $x <= 4; $x++): ?>

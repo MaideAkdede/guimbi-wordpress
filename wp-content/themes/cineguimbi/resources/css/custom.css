@@ -1,6 +1,12 @@
 body {
     @apply font-family-regular;
 }
+/* Progress Bar */
+.slide-progress {
+    height: 0;
+    max-height: 100%;
+    width: 4px;
+}
 
 /* HEADER LOGO */
 .custom-logo-link {
@@ -33,13 +39,13 @@ a#primary-menu-toggle div.toggle-logo {
 }
 /* Link in menu */
 .menu-link {
-    @apply inline-block max-w-80vw w-full p-5 border-b border-dark hover:border-white hover:text-secondary focus:text-secondary active:text-primary-dark xxl:border-b-0 xxl:border-r xxl:p-[1.5625rem] xxl:my-0;
+    @apply inline-block max-w-80vw w-full p-5 border-b border-dark transition ease-in-out hover:border-white xxl:hover:border-dark hover:text-secondary focus:text-secondary active:text-primary-dark xxl:border-b-0 xxl:border-r xxl:p-[1.5625rem] xxl:my-0;
+}
+.menu-link:hover svg {
+    @apply fill-secondary;
 }
 li:last-of-type a.menu-link{
     @apply border-b-0 xxl:border-none hover:border-b hover:border-white;
-}
-li:first-of-type a.menu-link{
-    @apply px-0;
 }
 /* ACTIVE HEADER*/
 header.active-header{
@@ -50,7 +56,7 @@ header.active-header{
 }
 
 .underline-title {
-    @apply font-family-black font-extrabold tracking-widest uppercase text-xl md:text-25px text-center mb-8 md:mb-10 after:block after:h-[6px] after:w-12 after:bg-primary after:rounded-full after:mx-auto after:-rotate-3 after:mt-1;
+    @apply font-family-black font-extrabold tracking-widest uppercase text-xl md:text-25px text-center mt-24 md:mt-20 mb-8 md:mb-10 after:block after:h-[6px] after:w-12 after:bg-primary after:rounded-full after:mx-auto after:-rotate-3 after:mt-1;
 }
 
 .colored-title {
@@ -110,11 +116,6 @@ header.active-header{
 .owl-theme.owl-carousel-regular .owl-nav button {
     @apply bg-primary h-11 w-11 rounded-full text-white text-lg grid place-content-center !important;
 }
-
-.owl-theme.owl-carousel-regular .owl-dots {
-    margin-top: 1.5rem;
-}
-
 .owl-theme.owl-carousel .owl-dots .owl-dot span {
     height: 9px;
     width: 9px;
@@ -131,7 +132,7 @@ header.active-header{
     @apply h-2.5 w-2.5;
 }
 .owl-theme.owl-carousel.owl-carousel-hero .owl-dots {
-   @apply -mt-16 mb-32 z-1 relative md:absolute md:right-0 md:rotate-90 md:m-0 md:top-1/2 md:-translate-y-1/2;
+   @apply -mt-16 mb-20 z-1 relative md:absolute md:right-0 md:rotate-90 md:m-0 md:top-1/2 md:-translate-y-1/2;
 }
 
 /*

@@ -33,7 +33,15 @@ module.exports = {
                 'footer': "url('../images/texture/footer.svg')",
                 'menu-texture': "url('../images/texture/menu.svg')",
             },
-
+            keyframes: {
+                bar: {
+                    'from': { width: '0%' },
+                    'to': { width: '100%' },
+                }
+            },
+            animation: {
+                bar: 'bar 2s ease-in-out infinite',
+            },
             height: {
                 'logo-sm':'50px',
                 'logo-md':'85px',
@@ -45,6 +53,7 @@ module.exports = {
             },
             minHeight:{
                 'pub':'300px',
+                'hero':'780px'
             },
             maxHeight: {
                 'support': '53px',
@@ -131,6 +140,9 @@ module.exports = {
             'lg': tailpress.theme('settings.layout.contentSize', theme),
             'xl': tailpress.theme('settings.layout.wideSize', theme),
             'xxl': '1820px',
+            '2xxl': '2080px',
+            '3xxl': '2280px',
+            '4xxl': '2500px',
         }
     },
     plugins: [

@@ -1,13 +1,16 @@
 <section class="my-8 max-w-xxl mx-auto">
-    <h1 class="text-xl md:text-25px mt-14 mb-8 text-center text-primary font-black font-family-black uppercase tracking-widest">Février 2022</h1>
+    <h1 class="text-xl md:text-25px mt-16 mb-8 text-center text-primary font-black font-family-black uppercase tracking-widest">
+        Février 2022</h1>
     <div class="">
         <div class="owl-carousel owl-theme owl-date">
-            <?php for ($x = 01; $x <= 25; $x++): ?>
+            <?php for ($x = 1; $x <= 25; $x++): ?>
                 <a href=""
+                   title=""
                    class="inline-flex items-center justify-center aspect-3/2 h-date-carousel font-bold font-family-bold border-r border-light-secondary text-primary py-2 last:border-none focus:outline-none">
-                    <time class="flex flex-col items-center justify-center <?php if($x == '2'):?>border border-primary<?php endif;?> rounded-full aspect-square h-full">
+                    <time class="flex flex-col items-center justify-center <?php if ($x == '2'): ?>border border-primary<?php endif; ?> rounded-full aspect-square h-full">
                         <span class="uppercase text-xs tracking-widest  text-primary text-opacity-50">Lun</span> <span
-                                class="<?php if($x !== '2'):?>text-26px text-dark-tertiary<?php endif;?> <?php if($x == '2'):?>text-2xl<?php endif;?>"><?= $x; ?></span></time>
+                                class="<?php if ($x !== '2'): ?>text-26px text-dark-tertiary<?php endif; ?> <?php if ($x == '2'): ?>text-2xl<?php endif; ?>">0<?= $x; ?></span>
+                    </time>
                 </a>
             <?php endfor; ?>
         </div>
@@ -28,7 +31,8 @@
                         <?php if ($x <= 3): ?>
                             <p class="hidden tag sm:block mt-2">Nouveau</p>
                         <?php endif; ?>
-                        <a href="" title="Voir le film : Adieu Monsieur Haffman" class="absolute h-full w-full rounded-md top-0 left-0 hover:border-2px hover:border-primary active:bg-primary active:bg-opacity-20 focus:outline-none focus:border-2px focus:border-primary"></a>
+                        <a href="" title="Voir le film : Adieu Monsieur Haffman"
+                           class="absolute h-full w-full rounded-md top-0 left-0 hover:border-2px hover:border-primary active:bg-primary active:bg-opacity-20 focus:outline-none focus:border-2px focus:border-primary"></a>
                     </article>
                 <?php endfor; ?>
             </div>
@@ -45,7 +49,8 @@
                             <span class="text-xs text-white text-center bg-tertiary rounded-full uppercase h-8 w-8 flex items-center justify-center leading-none pt-1">vf</span>
                         </div>
                         <h3 class="text-lg font-bold font-family-bold">Adieu Monsieur Haffman</h3>
-                        <a href="" title="Voir le film : Adieu Monsieur Haffman" class="absolute h-full w-full rounded-md top-0 left-0 hover:border-2px hover:border-tertiary active:bg-tertiary active:bg-opacity-20 focus:outline-none focus:border-2px focus:border-tertiary"></a>
+                        <a href="" title="Voir le film : Adieu Monsieur Haffman"
+                           class="absolute h-full w-full rounded-md top-0 left-0 hover:border-2px hover:border-tertiary active:bg-tertiary active:bg-opacity-20 focus:outline-none focus:border-2px focus:border-tertiary"></a>
                     </article>
                 <?php endfor; ?>
             </div>
@@ -62,7 +67,8 @@
                             <span class="text-xs text-white text-center bg-secondary rounded-full uppercase h-8 w-8 flex items-center justify-center leading-none pt-1">vf</span>
                         </div>
                         <h3 class="text-lg font-bold font-family-bold">Adieu Monsieur Haffman</h3>
-                        <a href="" title="Voir le film : Adieu Monsieur Haffman" class="absolute h-full w-full rounded-md top-0 left-0 hover:border-2px hover:border-secondary active:bg-secondary active:bg-opacity-20 focus:outline-none focus:border-2px focus:border-secondary"></a>
+                        <a href="" title="Voir le film : Adieu Monsieur Haffman"
+                           class="absolute h-full w-full rounded-md top-0 left-0 hover:border-2px hover:border-secondary active:bg-secondary active:bg-opacity-20 focus:outline-none focus:border-2px focus:border-secondary"></a>
                     </article>
                 <?php endfor; ?>
             </div>
