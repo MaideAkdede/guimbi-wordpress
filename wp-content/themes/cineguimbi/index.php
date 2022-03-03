@@ -3,7 +3,6 @@
 <!-- FRONT PAGE -->
 <?php if (is_front_page()) : ?>
     <?php get_template_part('template-parts/hero'); ?>
-    <?php get_template_part('template-parts/widget/medias'); ?>
     <?php get_template_part('template-parts/home/carousel-affiche'); ?>
     <?php get_template_part('template-parts/home/calendar'); ?>
     <?php get_template_part('template-parts/home/pub'); ?>

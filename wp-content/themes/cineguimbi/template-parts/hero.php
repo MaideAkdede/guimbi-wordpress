@@ -22,7 +22,7 @@
                             <a href=""
                                title=""
                                class="inline-block text-xs uppercase tracking-widest font-bold font-family-bold text-primary bg-white px-6 pt-3 pb-2 leading-none border-2px border-white ease-in-out transition hover:bg-transparent hover:text-white md:text-base md:max-w-max">Voir
-                                l‘évènement</a>
+                                l‘évènement <span class="sr-only"> : James Bond 007 No time to die</span></a>
                         </div>
                     </div>
                 </div>

@@ -16,8 +16,7 @@
 <div id="page" class="min-h-screen flex flex-col">
 
     <?php do_action('tailpress_header'); ?>
-
-    <header class="bg-black overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-full overflow-y-scroll xxl:overflow-visible">
+    <header class="overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-full overflow-y-scroll xxl:overflow-visible <?php if (is_page('adieu-monsieur-haffmann')): ?> bg-black/20 <?php else: ?> bg-black<?php endif; ?>">
         <div class="mx-auto max-w-xxl">
             <div class="flex justify-between items-center">
                 <div class="px-5 xxl:my-6 xxl:mx-auto h-logo-sm w-logo-sm md:h-logo-md md:w-logo-md">
@@ -39,18 +38,22 @@
                 <div class="flex items-center xxl:hidden">
                     <div class="text-white text-size-fontawesome mx-1 xs:mx-2 sm:mx-4">
                         <a href=""
+                           title="Visiter la page facebook Ciné Guimbi"
                            class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark"><i
                                     class="fa-brands fa-facebook-f"></i></a>
                         <a href=""
+                           title="Visiter la page instgram Ciné Guimbi"
                            class="border-r border-dark-secondary p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark"><i
                                     class="fa-brands fa-instagram"></i></a>
                         <a href=""
+                           title="Visiter la page Twitter Ciné Guimbi"
                            class="p-0 xxs:p-1 xs:p-2 sm:p-4 hover:text-primary focus:text-primary-dark active:text-primary-dark"><i
                                     class="fa-brands fa-twitter"></i></a>
                     </div>
-                    <a href="#" aria-label="Toggle navigation" id="primary-menu-toggle"
+                    <a href="#" aria-label="Menu de navigation" id="primary-menu-toggle"
+                       title="Menu de navigation"
                        class="open-menu bg-primary block flex transition hover:bg-primary-dark">
-                        <span class="sr-only">Menu</span>
+                        <span class="sr-only">Menu Principale</span>
                         <div class="h-1/4 w-2/4 flex flex-col items-end justify-between m-auto">
                             <span class="duration-300 block bg-white w-full h-2px"></span>
                             <span class="duration-150 block bg-white w-3/4 h-2px"></span>
@@ -59,13 +62,15 @@
                     </a>
                 </div>
             </div>
-            <div class="xxl:flex xxl:items-center xxl:flex-wrap xxl:justify-center">
+            <nav class="xxl:flex xxl:items-center xxl:flex-wrap xxl:justify-center">
                 <ul id="primary-menu"
                     class="py-5 hidden text-white text-center text-sm uppercase tracking-widest xxl:block xxl:flex xxl:flex-wrap xxl:justify-center xxl:max-w-xxl xxl:p-0">
                     <li class="">
-                        <a href="" class="menu-link"> <svg class="hidden mb-[5px] mr-5 xxl:inline-block fill-primary" data-name="Groupe 98" xmlns="http://www.w3.org/2000/svg"
-                                                           xmlns:xlink="http://www.w3.org/1999/xlink" width="17.41" height="14.995"
-                                                           viewBox="0 0 17.41 14.995">
+                        <a href="" class="menu-link">
+                            <svg class="hidden mb-[5px] mr-5 xxl:inline-block fill-primary" data-name="Groupe 98"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="17.41" height="14.995"
+                                 viewBox="0 0 17.41 14.995">
                                 <defs>
                                     <clipPath id="clip-path">
                                         <rect id="Rectangle_10" data-name="Rectangle 10" width="17.41" height="14.995"/>
@@ -76,7 +81,8 @@
                                           d="M17.311,7.828,14.265,5.034V.856h-2.91V2.363L8.866.079a.3.3,0,0,0-.407,0L.1,7.829a.3.3,0,0,0-.051.385.317.317,0,0,0,.271.14h2.1v6.34a.3.3,0,0,0,.3.3H6.654a.289.289,0,0,0,.289-.289V11.043a.365.365,0,0,1,.365-.365H10.1a.365.365,0,0,1,.365.365v3.664a.289.289,0,0,0,.289.289h3.938a.3.3,0,0,0,.3-.3V8.354h2.1a.317.317,0,0,0,.271-.141.3.3,0,0,0-.053-.385"
                                           transform="translate(0 -0.001)"/>
                                 </g>
-                            </svg><span>À l‘affiche</span></a>
+                            </svg>
+                            <span>À l‘affiche</span></a>
                     </li>
                     <li class="">
                         <a href="" class="menu-link">Agenda</a>
@@ -102,7 +108,10 @@
                         </a>
                         <ul class="sub-menu hidden xxl:absolute xxl:top-full xxl:w-max xxl:max-w-submenu xxl:text-left normal-case">
                             <?php for ($x = 1; $x <= 6; $x++): ?>
-                                <li class="border-b border-dark last:border-b-0 border-b-primary-dark xxl:border-b-dark xxl:hover:border-b-dark"><a href="" class="inline-block w-full p-5 ease-in-out transition xxl:p-25px xxl:my-0 bg-primary hover:bg-primary-dark xxl:bg-black xxl:hover:bg-black xxl:hover:border-l-8 xxl:hover:border-l-primary">Engagement de
+                                <li class="border-b border-dark last:border-b-0 border-b-primary-dark xxl:border-b-dark xxl:hover:border-b-dark">
+                                    <a href=""
+                                       class="inline-block w-full p-5 ease-in-out transition xxl:p-25px xxl:my-0 bg-primary hover:bg-primary-dark xxl:bg-black xxl:hover:bg-black xxl:hover:border-l-8 xxl:hover:border-l-primary">Engagement
+                                        de
                                         l‘égalité femmes-hommes</a></li>
                             <?php endfor; ?>
                         </ul>
@@ -112,14 +121,17 @@
                     </li>
                 </ul>
                 <div class="hidden xxl:block ml-4 text-white text-size-fontawesome">
-                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
+                    <a href=""
+                       class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
                                 class="fa-brands fa-facebook-f"></i></a>
-                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
+                    <a href=""
+                       class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
                                 class="fa-brands fa-instagram"></i></a>
-                    <a href="" class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
+                    <a href=""
+                       class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
                                 class="fa-brands fa-twitter"></i></a>
                 </div>
-            </div>
+            </nav>
             <!-- --><?php
             /*            wp_nav_menu(
                             array(
@@ -141,3 +153,4 @@
         <?php do_action('tailpress_content_start'); ?>
 
         <main>
+            <?php get_template_part('template-parts/widget/medias'); ?>
