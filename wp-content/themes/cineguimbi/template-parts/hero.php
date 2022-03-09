@@ -21,7 +21,7 @@
                                 James Bond 007 No time to die</h1>
                             <a href=""
                                title=""
-                               class="inline-block text-xs uppercase tracking-widest font-bold font-family-bold text-primary bg-white px-6 pt-3 pb-2 leading-none border-2px border-white ease-in-out transition hover:bg-transparent hover:text-white md:text-base md:max-w-max">Voir
+                               class="inline-block text-xs uppercase tracking-widest font-bold font-family-bold text-primary bg-white px-6 pt-3 pb-2 leading-none border-2px border-white md:text-base md:max-w-max hover:text-white shadow-set-hover hover:shadow-hover duration-150 ease-in">Voir
                                 l‘évènement <span class="sr-only"> : James Bond 007 No time to die</span></a>
                         </div>
                     </div>
