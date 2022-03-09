@@ -51,6 +51,11 @@
           "name": "Light Secondary",
           "slug": "light-secondary",
           "color": "#E5E5E5"
+        },
+        {
+          "name": "beige",
+          "slug": "beige",
+          "color": "#F1F2EB"
         }
       ]
     },

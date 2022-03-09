@@ -24,7 +24,7 @@
 		"production": "cross-env NODE_ENV=production concurrently \"npm run production:css-app\" \"npm run production:css-editor\" \"npm run production:js\"",
 		"dev": "cross-env NODE_ENV=development concurrently \"npm run dev:css-app\" \"npm run dev:css-editor\" \"npm run dev:js\"",
 		"watch": "cross-env NODE_ENV=development concurrently \"npm run watch:css-app\" \"npm run watch:css-editor\" \"npm run watch:js\"",
-		"browser-sync": "cross-env NODE_ENV=development browser-sync start --proxy \"tailpress.test\" --host=\"tailpress.test\" --no-inject-changes --files=\"./\"",
+		"browser-sync": "cross-env NODE_ENV=development browser-sync start --proxy \"guimbiwordpress.local\" --host=\"guimbiwordpress.local\" --no-inject-changes --files=\"./\"",
 		"watch-sync": "concurrently \"npm run browser-sync\" \"npm run watch\""
 	},
 	"devDependencies": {
@@ -42,10 +42,12 @@
 		"tailwindcss": "^3.0.0"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^4.0.26",
 		"@fortawesome/fontawesome-pro": "^6.0.0",
 		"@tailwindcss/line-clamp": "^0.3.1",
 		"delicious-hamburgers": "^1.2.2",
 		"jquery": "^3.6.0",
+		"masonry-layout": "^4.2.2",
 		"owl.carousel": "^2.3.4",
 		"tailwind-children": "^0.2.2",
 		"tailwindcss-delicious-hamburgers": "^1.0.3"
