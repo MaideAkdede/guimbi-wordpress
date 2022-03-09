@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="scroll-smooth">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
@@ -16,7 +16,7 @@
 <div id="page" class="min-h-screen flex flex-col">
 
     <?php do_action('tailpress_header'); ?>
-    <header class="overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-full overflow-y-scroll xxl:overflow-visible <?php if (is_page('adieu-monsieur-haffmann')): ?> bg-black/20 <?php else: ?> bg-black<?php endif; ?>">
+    <header class="overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-full overflow-y-scroll xxl:overflow-visible <?php if (is_page('adieu-monsieur-haffmann')): ?> bg-black lg:bg-black/20 <?php else: ?> bg-black<?php endif; ?>">
         <div class="mx-auto max-w-xxl">
             <div class="flex justify-between items-center">
                 <div class="px-5 xxl:my-6 xxl:mx-auto h-logo-sm w-logo-sm md:h-logo-md md:w-logo-md">
@@ -67,7 +67,7 @@
                     class="py-5 hidden text-white text-center text-sm uppercase tracking-widest xxl:block xxl:flex xxl:flex-wrap xxl:justify-center xxl:max-w-xxl xxl:p-0">
                     <li class="">
                         <a href="" class="menu-link">
-                            <svg class="hidden mb-[5px] mr-5 xxl:inline-block fill-primary" data-name="Groupe 98"
+                            <svg class="hidden mb-1.25 mr-5 xxl:inline-block fill-primary" data-name="Groupe 98"
                                  xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" width="17.41" height="14.995"
                                  viewBox="0 0 17.41 14.995">
@@ -85,12 +85,12 @@
                             <span>À l‘affiche</span></a>
                     </li>
                     <li class="">
-                        <a href="" class="menu-link">Agenda</a>
+                        <a href="/agenda" class="menu-link">Agenda</a>
                     </li>
                     <li class="">
-                        <a href="" class="menu-link ">Tous les films</a></li>
+                        <a href="/films" class="menu-link ">Tous les films</a></li>
                     <li class="">
-                        <a href="" class="menu-link ">Évènements</a>
+                        <a href="/evenement" class="menu-link ">Évènements</a>
                     </li>
                     <li class="">
                         <a href="" class="menu-link ">Hub ciné guimbi</a>

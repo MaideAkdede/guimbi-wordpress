@@ -60,21 +60,21 @@
         <nav class="sr-only lg:not-sr-only max-w-max">
             <p class="text-primary font-black font-family-black mb-8 uppercase">Menu</p>
             <ul class="text-light columns-2 max-w-max">
-                <li class="lg:border-r py-2.5 border-light"><a href="" class="hover:text-white">À l‘affiche</a></li>
-                <li class="lg:border-r py-2.5 border-light"><a href="" class="hover:text-white">Agenda</a></li>
-                <li class="lg:border-r py-2.5 border-light"><a href="" class="hover:text-white">Tous les films</a></li>
-                <li class="lg:border-r py-2.5 border-light"><a href="" class="hover:text-white">Évènements</a></li>
+                <li class="lg:border-r py-2.5 border-light"><a href="/" class="hover:text-white">À l‘affiche</a></li>
+                <li class="lg:border-r py-2.5 border-light"><a href="/agenda" class="hover:text-white">Agenda</a></li>
+                <li class="lg:border-r py-2.5 border-light"><a href="/films" class="hover:text-white">Tous les films</a></li>
+                <li class="lg:border-r py-2.5 border-light"><a href="/evenement" class="hover:text-white">Évènements</a></li>
                 <li class="lg:border-r py-2.5 border-light"><a href="" class="hover:text-white">Hub Ciné Guimbi</a></li>
                 <li class="py-2.5 lg:ml-10"><a href="" class="hover:text-white">Restaurant</a></li>
                 <li class="py-2.5 lg:ml-10"><a href="" class="hover:text-white">Actualités</a></li>
                 <li class="py-2.5 lg:ml-10"><a href="" class="hover:text-white">En pratique</a></li>
-                <li class="py-2.5 lg:ml-10"><a href="" class="hover:text-white">Contact</a></li>
-                <li class="py-2.5 lg:ml-10"><a href="" class="hover:text-white">Politique de confidentialités</a></li>
+                <li class="py-2.5 lg:ml-10"><a href="/contact" class="hover:text-white">Contact</a></li>
+                <li class="py-2.5 lg:ml-10"><a href="/privacy-policy" class="hover:text-white">Politique de confidentialités</a></li>
             </ul>
         </nav>
     </div>
     <div class="bg-black py-6">
-        <a href="" class="mx-auto text-center text-light flex justify-center items-center">Site réalisé par <span
+        <a href="https://www.lws.be/" class="mx-auto text-center text-light flex justify-center items-center text-xs" title="Visiter le site de LWS">Site réalisé par <span
                     class="sr-only">LWS</span>
             <svg class="mx-3" xmlns="http://www.w3.org/2000/svg" width="52" height="17" viewBox="0 0 52 17">
                 <g id="Groupe_45" data-name="Groupe 45" transform="translate(0.444 0.143)">
