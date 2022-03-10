@@ -7903,9 +7903,15 @@
       (function() {
         const ToggleSubMenu = {
           init() {
-            this.toggleSub = document.querySelector(".sub");
-            this.toggleArrow = document.querySelector(".sub i");
-            this.submenu = document.querySelector(".sub-menu");
+            this.element = document.querySelector(".menu-item-has-children");
+            this.toggleSub = this.element.querySelector("a");
+            this.toggleArrow = this.element.querySelector("a i");
+            this.submenu = this.element.querySelector("ul");
+            this.submenu = this.element.querySelector(".sub-menu");
+            this.submenuLi = this.submenu.querySelectorAll("li a");
+            for (let li = 0; li < this.submenuLi.length; li++) {
+              this.submenuLi[li].classList.remove("menu-link");
+            }
             this.toggleSub.addEventListener("click", (e2) => this.toggle(e2));
             this.toggleSub.addEventListener("mouseover", (e2) => this.hover(e2));
             this.submenu.addEventListener("mouseover", (e2) => this.hover(e2));

@@ -1,9 +1,24 @@
 (function () {
     const ToggleSubMenu = {
         init() {
-            this.toggleSub = document.querySelector('.sub');
-            this.toggleArrow = document.querySelector('.sub i');
-            this.submenu = document.querySelector('.sub-menu');
+            // CIBLER LE LI QUI A UN SOUS MENU
+            this.element = document.querySelector('.menu-item-has-children');
+
+            // cibler le lien et ajouter la class SUB
+            this.toggleSub = this.element.querySelector('a');
+
+            // cibler la flèche du lien
+            this.toggleArrow = this.element.querySelector('a i');
+
+            // cibler le sous menu UL
+            this.submenu = this.element.querySelector('ul');
+
+            // cibler les LI du sous menu
+            this.submenu = this.element.querySelector('.sub-menu');
+            this.submenuLi = this.submenu.querySelectorAll('li a');
+            for(let li = 0 ; li < this.submenuLi.length; li++){
+                this.submenuLi[li].classList.remove('menu-link');
+            }
 
             this.toggleSub.addEventListener('click', (e) => this.toggle(e));
             this.toggleSub.addEventListener('mouseover', (e) => this.hover(e));
