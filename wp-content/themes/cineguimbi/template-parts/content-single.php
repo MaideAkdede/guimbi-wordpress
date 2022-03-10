@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php the_title( sprintf( '<h1 class="underline-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h1 class="underline-title mb-12 lg:mb-20"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 
 	<div class="wysiwyg max-w-wysiwyg mx-auto px-5 pb-12 lg:pb-24">
