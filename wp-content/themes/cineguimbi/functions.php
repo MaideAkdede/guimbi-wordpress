@@ -8,7 +8,9 @@ function tailpress_setup() {
 
 	register_nav_menus(
 		array(
-			'primary' => __( 'Primary Menu', 'cineguimbi' ),
+			'primary' => __( 'Menu Principal', 'cineguimbi' ),
+			'footer' => __( 'Menu Footer', 'cineguimbi'),
+			'socials' => __( 'Menu Socials', 'cineguimbi'),
 		)
 	);
 
@@ -107,3 +109,11 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+function add_menu_link_class( $atts, $item, $args ) {
+    if (property_exists($args, 'link_class')) {
+        $atts['class'] = $args->link_class;
+    }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
