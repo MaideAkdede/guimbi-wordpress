@@ -37,53 +37,71 @@
             </svg>
             <div class="">
                 <div class="mb-8 pb-8 border-b border-dark lg:border-none max-w-max mx-auto">
-                    <p class="mb-5 md:mb-10 text-white uppercase font-semibold font-family-semi max-w-42ch leading-loose">
-                        Association de soutien <span class="sr-only">du cinéma au Burkina Faso</span><br> du cinéma au
+                    <p class="mb-5 md:mb-6.25 text-white uppercase font-semibold font-family-semi max-w-42ch leading-loose">
+                        Association de soutien <br> du cinéma au
                         Burkina Faso (<abbr title="Association de soutien du cinéma au burkina faso">ASCBF</abbr>)</p>
-                    <address class="mb-6 not-italic"><i class="fa-solid fa-location-dot text-primary mr-3"></i> BP 415
-                        Bobo-Dioulasso –
-                        Burkina Faso
+                    <address class="mb-6 not-italic"><i class="fa-solid fa-location-dot text-primary mr-3"></i>
+                        <?php the_field('address', 'option'); ?>
                     </address>
-                    <a href="mailto:xxx" class="block hover:text-white"><i
-                                class="fa-solid fa-envelope text-primary mr-3"></i>contact@cineguimbi.org</a>
+                    <a href="mailto:<?php the_field('mail', 'option'); ?>" class="block hover:text-white"><i
+                                class="fa-solid fa-envelope text-primary mr-3"></i><?php the_field('mail', 'option'); ?>
+                    </a>
                 </div>
-                <div class="my-8 menu-socials">
-                    <?php wp_nav_menu(['theme_location' => 'socials', 'container' => false]); ?>
-                </div>
+                <?php if (have_rows('socials', 'option')): ?>
+                    <div class="my-8 menu-socials">
+                        <ul>
+                            <?php while (have_rows('socials', 'option')): the_row(); ?>
+                                <li>
+                                    <a href="<?php the_sub_field('social_link'); ?>"
+                                       title="<?php the_sub_field('social_name'); ?>">
+                                        <?php the_sub_field('social_icon'); ?>
+                                    </a>
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
+                    </div>
+                <?php endif ?>
             </div>
         </div>
-        <nav class="sr-only lg:not-sr-only max-w-fit menu-footer">
-            <p class="text-primary font-black font-family-black mb-20 uppercase">Menu</p>
-            <?php wp_nav_menu(['theme_location' => 'footer', 'container' => false]); ?>
+        <nav class="sr-only lg:not-sr-only max-w-fit">
+            <p class="text-primary font-black font-family-black mb-6 uppercase">Menu</p>
+            <?php wp_nav_menu([
+                'theme_location' => 'footer',
+                'container' => false,
+                'menu_class' => 'menu-footer text-light grid grid-cols-2',
+                'li_class' => 'group',
+                'link_class' => 'py-2.5 duration-150 group-hover:text-white block',
+                'submenu_class' => 'hidden',
+                'fallback_cb' => false,
+            ]); ?>
         </nav>
     </div>
     <div class="bg-black py-6">
-        <a href="https://www.lws.be/" class="mx-auto text-center text-light flex justify-center items-center text-xs"
+        <a href="https://www.lws.be/"
+           class="mx-auto text-center text-light flex justify-center items-center text-xs hover:text-white group"
            title="LWS Léonard Web Solution">Site réalisé par
             <span class="sr-only">LWS</span>
-            <svg class="mx-3" xmlns="http://www.w3.org/2000/svg" width="52" height="17" viewBox="0 0 52 17">
-                <g id="Groupe_45" data-name="Groupe 45" transform="translate(0.444 0.143)">
-                    <rect id="Rectangle_1" data-name="Rectangle 1" width="16" height="17"
-                          transform="translate(35.556 -0.143)" fill="#777778"/>
-                    <rect id="Rectangle_2" data-name="Rectangle 2" width="16" height="17"
-                          transform="translate(17.556 -0.143)" fill="#a8a8a8"/>
-                    <rect id="Rectangle_3" data-name="Rectangle 3" width="17" height="17"
-                          transform="translate(-0.444 -0.143)" fill="#1797c2"/>
-                    <g id="Groupe_4" data-name="Groupe 4" transform="translate(6.002 4.405)">
-                        <g id="Groupe_1" data-name="Groupe 1" transform="translate(0 0.114)">
-                            <path id="Tracé_1" data-name="Tracé 1" d="M65.3,55.024v-7h2v6h3v1Z"
-                                  transform="translate(-65.742 -47.685)" fill="#fff"/>
-                        </g>
-                        <g id="Groupe_2" data-name="Groupe 2" transform="translate(15.029 0.114)">
-                            <path id="Tracé_2" data-name="Tracé 2"
-                                  d="M232.894,55.024l-3-7h2l1,5h0l2-5h1l1,5h0l2-5h1l-2,7h-1l-2-5h0l-1,5Z"
-                                  transform="translate(-230.369 -47.685)" fill="#fff"/>
-                        </g>
-                        <g id="Groupe_3" data-name="Groupe 3" transform="translate(34.844)">
-                            <path id="Tracé_3" data-name="Tracé 3"
-                                  d="M452.135,48.894c-.039-.347-.717-.808-1-1s-.57,0-1,0a3.459,3.459,0,0,0-1,0c-.225.1.123-.167,0,0s0,.788,0,1c0,.178-.084-.129,0,0s-.138-.087,0,0,.841.943,1,1-.147-.037,0,0h1c.239.059-.252-.1,0,0s.785.836,1,1,.867-.242,1,0,0,.663,0,1c0,.425.219.67,0,1a2.862,2.862,0,0,1-1,1,7.005,7.005,0,0,1-2,0c-.562,0-.59.178-1,0a2.911,2.911,0,0,1-1-1c-.232-.328-.976-.548-1-1h1c.022.271.845.82,1,1s-.243-.087,0,0a3.859,3.859,0,0,0,1,0,3.3,3.3,0,0,0,1,0c.25-.1.856.182,1,0s0-.756,0-1c0-.222.126.142,0,0a6.921,6.921,0,0,0-1-1c-.214-.093-.731.071-1,0h-1c-.6-.164-.65-.682-1-1s-1-.477-1-1c0-.432.765-.678,1-1a3.093,3.093,0,0,1,1-1c.4-.179.5,0,1,0s.61-.178,1,0a3.2,3.2,0,0,1,1,1c.225.311.99.6,1,1Z"
-                                  transform="translate(-447.425 -46.441)" fill="#fff"/>
-                        </g>
+            <svg class="mx-3 group-hover:animate-pulse" xmlns="http://www.w3.org/2000/svg" width="51.725"
+                 height="16.176" viewBox="0 0 51.725 16.176">
+                <g id="lws" transform="translate(0 -0.182)">
+                    <g id="group_l">
+                        <rect id="rect_l" width="16.176" height="16.176" transform="translate(0 0.182)" fill="#1797c2"/>
+                        <path id="letter_l" d="M65.742,55.187v-7.5h1.132v6.528h3.4v.974Z"
+                              transform="translate(-59.74 -43.167)" fill="#fff"/>
+                    </g>
+                    <g id="group_w">
+                        <rect id="rect_w" width="16.176" height="16.176" transform="translate(17.774 0.182)"
+                              fill="#a8a8a8"/>
+                        <path id="letter_w"
+                              d="M232.45,55.187l-2.081-7.5h1.191l1.462,5.81h.07l1.52-5.81h1.18l1.52,5.814h.07l1.458-5.814h1.194l-2.084,7.5h-1.139l-1.579-5.619h-.059l-1.579,5.619Z"
+                              transform="translate(-209.338 -43.167)" fill="#fff"/>
+                    </g>
+                    <g id="group_s">
+                        <rect id="rect_s" width="16.176" height="16.176" transform="translate(35.549 0.182)"
+                              fill="#777778"/>
+                        <path id="letter_s"
+                              d="M451.814,48.514a1.076,1.076,0,0,0-.484-.808,1.868,1.868,0,0,0-1.07-.287,2.014,2.014,0,0,0-.8.145,1.234,1.234,0,0,0-.522.4.936.936,0,0,0-.185.57.828.828,0,0,0,.126.462,1.07,1.07,0,0,0,.333.324,2.291,2.291,0,0,0,.445.216,4.681,4.681,0,0,0,.458.141l.733.191a5.6,5.6,0,0,1,.736.238,2.954,2.954,0,0,1,.7.4,1.916,1.916,0,0,1,.522.608,1.774,1.774,0,0,1,.2.868,2,2,0,0,1-.328,1.132,2.213,2.213,0,0,1-.949.78,3.569,3.569,0,0,1-1.5.286,3.639,3.639,0,0,1-1.458-.267,2.238,2.238,0,0,1-.964-.76,2.188,2.188,0,0,1-.385-1.17h1.136a1.146,1.146,0,0,0,.266.676,1.388,1.388,0,0,0,.6.4,2.368,2.368,0,0,0,.8.13,2.264,2.264,0,0,0,.855-.152,1.408,1.408,0,0,0,.592-.425,1,1,0,0,0,.216-.639.792.792,0,0,0-.189-.546,1.432,1.432,0,0,0-.509-.352,5.067,5.067,0,0,0-.723-.245l-.887-.242a3.434,3.434,0,0,1-1.427-.722,1.618,1.618,0,0,1-.526-1.26,1.872,1.872,0,0,1,.352-1.132,2.323,2.323,0,0,1,.952-.753,3.281,3.281,0,0,1,1.355-.269,3.2,3.2,0,0,1,1.346.267,2.274,2.274,0,0,1,.921.734,1.866,1.866,0,0,1,.352,1.072Z"
+                              transform="translate(-406.579 -42.036)" fill="#fff"/>
                     </g>
                 </g>
             </svg>

@@ -16,7 +16,7 @@
 <div id="page" class="min-h-screen flex flex-col">
 
     <?php do_action('tailpress_header'); ?>
-    <header class="overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-full overflow-y-scroll xxl:overflow-visible <?php if (is_page('adieu-monsieur-haffmann')): ?> bg-black lg:bg-black/60 <?php else: ?> bg-black<?php endif; ?>">
+    <header class="overflow-x-hidden xxl:bg-none sticky xxl:static top-0 z-30 w-full overflow-y-scroll xxl:overflow-visible <?php if(is_singular('film')): ?> bg-black lg:bg-black/50 <?php else: ?> bg-black<?php endif; ?>">
         <div class="mx-auto max-w-xxl">
             <div class="flex justify-between items-center">
                 <div class="px-5 xxl:my-6 xxl:mx-auto h-logo-sm w-logo-sm md:h-logo-md md:w-logo-md">
@@ -36,9 +36,20 @@
                     <?php } ?>
                 </div>
                 <div class="flex items-center xxl:hidden">
-                    <div class="text-white text-size-fontawesome mx-1 xs:mx-2 sm:mx-4 socials-mobile">
-                        <?php wp_nav_menu(['theme_location' => 'socials', 'container' => false]); ?>
-                    </div>
+                    <?php if (have_rows('socials', 'option')): ?>
+                        <div class="text-white text-size-fontawesome mx-1 xs:mx-2 sm:mx-4 socials-mobile">
+                            <ul>
+                                <?php while (have_rows('socials', 'option')): the_row(); ?>
+                                    <li>
+                                        <a href="<?php the_sub_field('social_link'); ?>"
+                                           title="<?php the_sub_field('social_name'); ?>">
+                                            <?php the_sub_field('social_icon'); ?>
+                                        </a>
+                                    </li>
+                                <?php endwhile; ?>
+                            </ul>
+                        </div>
+                    <?php endif ?>
                     <a href="#" aria-label="Menu de navigation" id="primary-menu-toggle"
                        title="Menu de navigation"
                        class="open-menu bg-primary block flex transition hover:bg-primary-dark">
@@ -60,24 +71,26 @@
                         'menu_class' => 'py-5 text-white text-center text-sm uppercase tracking-widest xxl:block xxl:flex xxl:flex-wrap xxl:justify-center xxl:max-w-xxl xxl:p-0',
                         'theme_location' => 'primary',
                         'li_class' => '',
-                        'link_class' => 'menu-link',
+                        'link_class' => 'menu-link group',
                         'submenu_class' => 'hidden xxl:absolute xxl:top-full xxl:w-max xxl:max-w-submenu xxl:text-left normal-case',
                         'fallback_cb' => false,
                     )
                 );
                 ?>
-                <div class="hidden xxl:block ml-4 text-white text-size-fontawesome socials-desktop">
-                    <?php wp_nav_menu(['theme_location' => 'socials', 'container' => false]); ?>
-                    <!-- <a href=""
-                        class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
-                                 class="fa-brands fa-facebook-f"></i></a>
-                     <a href=""
-                        class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
-                                 class="fa-brands fa-instagram"></i></a>
-                     <a href=""
-                        class="mx-3 hover:text-primary focus:text-primary active:text-primary-dark transition ease-in-out"><i
-                                 class="fa-brands fa-twitter"></i></a>-->
-                </div>
+                <?php if (have_rows('socials', 'option')): ?>
+                    <div class="hidden xxl:block ml-4 text-white text-size-fontawesome socials-desktop">
+                        <ul>
+                            <?php while (have_rows('socials', 'option')): the_row(); ?>
+                                <li>
+                                    <a href="<?php the_sub_field('social_link'); ?>"
+                                       title="<?php the_sub_field('social_name'); ?>">
+                                        <?php the_sub_field('social_icon'); ?>
+                                    </a>
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
+                    </div>
+                <?php endif ?>
             </nav>
 
         </div>

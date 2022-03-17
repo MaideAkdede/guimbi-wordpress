@@ -1,6 +1,6 @@
 <?php /* Template Name: Tous les Films */ ?>
 <?php get_header(); ?>
-<h1 class="underline-title">Tous les films</h1>
+<h1 class="underline-title"><?php the_title(); ?></h1>
 
 <div class="bg-beige">
     <div class="sort relative">
@@ -158,51 +158,52 @@
                 </form>
             </li>
         </ul>
-        <div class="bg-beige px-5 py-10 lg:pt-0 lg:pb-44 xl:grid xl:grid-cols-2 gap-10 max-w-xxl mx-auto">
-            <?php for ($x = 1; $x <= 5; $x++): ?>
-                <article
-                        class="group bg-white first:mt-0 last:mb-0 mt-10 mb-10 xl:my-0 max-w-md shadow-md mx-auto md:max-w-none md:grid md:grid-cols-movie-cast relative">
-                    <img class="w-full h-full object-cover"
-                         src="<?php echo get_template_directory_uri() . '/resources/images/movie/' . $x . '.png' ?>"
-                         alt="">
-                    <div class="px-5 py-10 md:grid md:place-content-center">
-                        <h2 class="text-lg font-bold font-family-bold">À plein temps</h2>
-                        <p class="text-primary text-15px font-bold font-family-bold"> Sortie :
-                            <time>23 mars 2022</time>
-                        </p>
-                        <div class="flex mt-3 mb-5">
-                            <img title="Peur et angoisse"
-                                 class="aspect-square w-6.5"
-                                 src="<?php echo get_template_directory_uri() . '/resources/images/age/peur.png' ?>"
-                                 alt="Peur et angoisse">
-                            <img title="Potentiellement préjudiciable aux enfants de moins de 9 ans"
-                                 class="aspect-square w-6.5"
-                                 src="<?php echo get_template_directory_uri() . '/resources/images/age/age9.png' ?>"
-                                 alt="Potentiellement préjudiciable aux enfants de moins de 9 ans">
-                            <img title="Langage grossier"
-                                 class="aspect-square w-6.5"
-                                 src="<?php echo get_template_directory_uri() . '/resources/images/age/langage.png' ?>"
-                                 alt="Langage Grossier">
-                            <img title="Tout public"
-                                 class="aspect-square w-6.5"
-                                 src="<?php echo get_template_directory_uri() . '/resources/images/age/al.png' ?>"
-                                 alt="Tout public"">
-                        </div>
-                        <p class="line-clamp-6 font-light font-family-light">Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Animi ducimus
-                            ea
-                            incidunt ipsam iste itaque laborum magni maxime nam nemo odit officia officiis perferendis,
-                            praesentium quas sint sunt ullam vel Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                            At
-                            debitis illum libero nihil optio ratione saepe, sequi veniam. Amet at beatae dignissimos
-                            dolorum
-                            libero nemo ratione tempora vel veniam voluptates.</p>
-                        <p class="block max-w-max font-bold font-family-bold uppercase text-primary text-xs border border-primary px-5 pt-3.5 pb-2.5 group-hover:text-white shadow-set-hover group-hover:shadow-hover duration-150 ease-in tracking-widest mt-5">Voir la fiche du film</p></div>
-                    <a href="/adieu-monsieur-haffmann" title="Voir la fiche du film XXX" class="absolute block h-full w-full top-0 left-0 group-hover:border-2px group-hover:border-primary focus:outline-none focus:border-2px focus:border-primary"></a>
-                </article>
-            <?php endfor ?>
-        </div>
+        <?php
+        $posts = new WP_Query([
+            'post_type' => 'film',
+            'posts_per_page' => 10,
+        ]);
+        if ($posts->have_posts()): ?>
+            <div class="bg-beige px-5 py-10 lg:pt-0 lg:pb-44 xl:grid xl:grid-cols-2 gap-10 max-w-xxl mx-auto">
+                <?php while ($posts->have_posts()) : $posts->the_post(); ?>
+                    <article
+                            class="group bg-white first:mt-0 last:mb-0 mt-10 mb-10 xl:my-0 max-w-md shadow-md mx-auto md:max-w-none md:grid md:grid-cols-movie-cast relative">
+                        <?php if (has_post_thumbnail()): ?>
+                            <?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'w-full h-full object-cover']); ?>
+                        <?php endif; ?>
+                        <div class="px-5 py-10 my-auto">
+                            <h2 class="text-lg font-bold font-family-bold first-letter:uppercase"><?= the_title(); ?></h2>
+                            <p class="text-primary text-15px font-bold font-family-bold"> Sortie :
+                                <time datetime="<?php the_field('release_date'); ?>">
+                                    <?= date_i18n('j F Y', strtotime(get_field('release_date'))); ?>
+                                </time>
+                            </p>
+                            <?php
+                            $logos = get_field('classification');
+                            if ($logos): ?>
+                                <div class="flex mt-3 mb-5 overflow-hidden">
+                                    <?php foreach ($logos as $logo): ?>
+                                        <img class="aspect-square w-6.5 h-6.5"
+                                             src="<?php echo get_template_directory_uri() . '/resources/images/age/' . $logo['value'] . '.png' ?>"
+                                             alt="<?= $logo['label'] ?>" height="38" width="38">
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if (get_the_excerpt()): ?>
+                                <div class="line-clamp-6 font-light font-family-light">
+                                    <?php the_excerpt(); ?>
+                                </div>
+                            <?php endif ?>
+                            <p class="block max-w-max font-bold font-family-bold uppercase text-primary text-xs border border-primary px-5 pt-3.5 pb-2.5 group-hover:text-white shadow-set-hover group-hover:shadow-hover duration-150 ease-in tracking-widest mt-5">
+                                Voir la fiche du film</p></div>
+                        <a href="<?php the_permalink(); ?>" title="Voir la fiche du film XXX"
+                           class="absolute block h-full w-full top-0 left-0 group-hover:border-2px group-hover:border-primary focus:outline-none focus:border-2px focus:border-primary"></a>
+                    </article>
+                <?php endwhile; ?>
+            </div>
+        <?php else: ?>
+            <p class="text-center">Aucun film</p>
+        <?php endif; ?>
     </div>
 </div>
 <?php get_footer(); ?>

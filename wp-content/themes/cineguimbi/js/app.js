@@ -7782,6 +7782,7 @@
         $(".owl-carousel-regular").owlCarousel({
           loop: true,
           nav: true,
+          margin: 20,
           dots: true,
           navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
           responsive: {
@@ -7947,6 +7948,39 @@
     }
   });
 
+  // resources/js/parts/toggle-submenu-footer.js
+  var require_toggle_submenu_footer = __commonJS({
+    "resources/js/parts/toggle-submenu-footer.js"() {
+      (function() {
+        const ToggleSubMenuFooter = {
+          init() {
+            this.element = document.querySelector("#menu-pied-de-page .menu-item-has-children");
+            this.submenu = document.querySelector("#menu-pied-de-page .sub-menu");
+            if (this.element) {
+              this.element.addEventListener("click", (e2) => this.toggle(e2));
+              document.addEventListener("click", (e2) => this.bodyClick(e2));
+            }
+          },
+          toggle(e2) {
+            e2.preventDefault();
+            this.submenu.classList.toggle("hidden");
+            this.element.classList.toggle("group");
+            this.element.classList.toggle("text-white");
+          },
+          bodyClick(e2) {
+            if (e2.target === this.element || this.element.contains(e2.target)) {
+              return;
+            }
+            this.submenu.classList.add("hidden");
+            this.element.classList.remove("text-white");
+            this.element.classList.add("group");
+          }
+        };
+        ToggleSubMenuFooter.init();
+      })();
+    }
+  });
+
   // resources/js/parts/focus-search.js
   var require_focus_search = __commonJS({
     "resources/js/parts/focus-search.js"() {
@@ -8040,20 +8074,24 @@
         const ToggleReadMore = {
           init() {
             this.detailBtn = document.querySelector("section.detail .readmore");
-            this.detailBtnContent = document.querySelectorAll("section.detail .readmore span");
-            this.detailArrow = document.querySelector("section.detail .readmore i");
-            this.detailHidden = document.querySelectorAll("section.detail ul li.hidden");
-            this.detailAfter = document.querySelector("section.detail ul");
             this.synopsisBtn = document.querySelector("section.synopsis .readmore");
-            this.synopsisBtnContent = document.querySelectorAll("section.synopsis .readmore span");
-            this.synopsisArrow = document.querySelector("section.synopsis .readmore i");
-            this.synopsisAfter = document.querySelector("section div");
-            this.synHidden = document.querySelectorAll("section.synopsis div>*");
             if (this.detailBtn != null) {
+              this.detailBtnContent = document.querySelectorAll("section.detail .readmore span");
+              this.detailArrow = document.querySelector("section.detail .readmore i");
+              this.detailHidden = document.querySelectorAll("section.detail ul li.hidden");
+              this.detailAfter = document.querySelector("section.detail ul");
               this.detailBtn.addEventListener("click", (e2) => this.toggleDetail(e2));
             }
             if (this.synopsisBtn != null) {
+              this.synopsisBtnContent = document.querySelectorAll("section.synopsis .readmore span");
+              this.synopsisArrow = document.querySelector("section.synopsis .readmore i");
+              this.synopsisAfter = document.querySelector("section.synopsis .synopsis-wysiwyg");
+              this.synHidden = document.querySelectorAll("section.synopsis .synopsis-wysiwyg p:not(:first-child)");
+              this.synLink = document.querySelector("section.synopsis .synopsis-wysiwyg>a");
               this.synopsisBtn.addEventListener("click", (e2) => this.toggleSynopsis(e2));
+              for (let i2 = 0; i2 < this.synHidden.length; i2++) {
+                this.synHidden[i2].classList.add("hidden");
+              }
             }
           },
           toggleDetail(e2) {
@@ -8072,13 +8110,14 @@
             e2.preventDefault();
             for (let i2 = 0; i2 < this.synHidden.length; i2++) {
               this.synHidden[i2].classList.toggle("hidden");
-              this.synHidden[i2].classList.toggle("first:block");
             }
             for (let i2 = 0; i2 < this.synopsisBtnContent.length; i2++) {
               this.synopsisBtnContent[i2].classList.toggle("hidden");
             }
+            this.synLink.classList.toggle("hidden");
             this.synopsisBtn.classList.toggle("-mt-7");
             this.synopsisAfter.classList.toggle("after:block");
+            this.synopsisAfter.classList.toggle("synopsis-wysiwyg-hidden");
             this.synopsisAfter.classList.toggle("after:hidden");
             this.synopsisArrow.classList.toggle("rotate-180");
           }
@@ -8122,6 +8161,51 @@
           }
         };
         ToggleSorting.init();
+      })();
+    }
+  });
+
+  // resources/js/parts/toggle-views.js
+  var require_toggle_views = __commonJS({
+    "resources/js/parts/toggle-views.js"() {
+      (function() {
+        const ToggleViews = {
+          init() {
+            this.wrapper = document.querySelector(".article-wrapper");
+            if (this.wrapper != null) {
+              this.cards = this.wrapper.querySelectorAll(".article-card");
+              this.listBtn = document.querySelector(".show-list");
+              this.cardBtn = document.querySelector(".show-card");
+              this.cardBtn.addEventListener("click", (e2) => this.toggleCard(e2));
+              this.listBtn.addEventListener("click", (e2) => this.toggleList(e2));
+            }
+          },
+          toggleCard(e2) {
+            e2.preventDefault();
+            this.wrapper.classList.add("card");
+            this.cardBtn.classList.remove("bg-beige", "text-primary", "fill-primary");
+            this.cardBtn.classList.add("bg-primary", "text-white", "fill-white");
+            this.listBtn.classList.remove("bg-primary", "text-white", "fill-white");
+            this.listBtn.classList.add("bg-beige", "text-primary", "fill-primary");
+            this.cards.forEach((card) => {
+              card.classList.remove("md:aspect-auto", "md:grid", "md:grid-cols-md-actu", "md:items-center", "md:text-left");
+              card.querySelector("img").classList.remove("md:aspect-auto", "md:h-full");
+            });
+          },
+          toggleList(e2) {
+            e2.preventDefault();
+            this.wrapper.classList.remove("card");
+            this.cardBtn.classList.add("bg-beige", "text-primary", "fill-primary");
+            this.cardBtn.classList.remove("bg-primary", "text-white", "fill-white");
+            this.listBtn.classList.add("bg-primary", "text-white", "fill-white");
+            this.listBtn.classList.remove("bg-beige", "text-primary", "fill-primary");
+            this.cards.forEach((card) => {
+              card.classList.add("md:aspect-auto", "md:grid", "md:grid-cols-md-actu", "md:items-center", "md:text-left");
+              card.querySelector("img").classList.add("md:aspect-auto", "md:h-full");
+            });
+          }
+        };
+        ToggleViews.init();
       })();
     }
   });
@@ -10119,12 +10203,35 @@
   window.addEventListener("load", function() {
     Promise.resolve().then(() => __toModule(require_toggle_menu()));
     Promise.resolve().then(() => __toModule(require_toggle_submenu()));
+    Promise.resolve().then(() => __toModule(require_toggle_submenu_footer()));
     Promise.resolve().then(() => __toModule(require_focus_search()));
     Promise.resolve().then(() => __toModule(require_toggle_tabs()));
     Promise.resolve().then(() => __toModule(require_sticky_scroll()));
     Promise.resolve().then(() => __toModule(require_toggle_readmore()));
     Promise.resolve().then(() => __toModule(require_toggle_sorting()));
+    Promise.resolve().then(() => __toModule(require_toggle_views()));
   });
+  if (document.querySelector("#mainCarousel")) {
+    const mainCarousel = new y(document.querySelector("#mainCarousel"), {
+      infinite: false,
+      Navigation: false
+    });
+    F.bind('[data-fancybox="gallery"]', {
+      Carousel: {
+        on: {
+          change: (carousel, to) => {
+            const $el = F.getInstance().getSlide().$trigger.closest(".carousel__slide");
+            const slide = mainCarousel.slides.find((slide2) => {
+              return slide2.$el === $el;
+            });
+            mainCarousel.slideTo(slide.index, {
+              friction: 0
+            });
+          }
+        }
+      }
+    });
+  }
 })();
 /*!
  * jQuery JavaScript Library v3.6.0

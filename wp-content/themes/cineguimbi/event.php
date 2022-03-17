@@ -1,12 +1,12 @@
-<?php /* Template Name: Evenement */ ?>
+<?php /* Template Name: Tous les évènements */ ?>
 <?php get_header(); ?>
-<h1 class="underline-title">Évènement</h1>
-<div class="bg-beige pb-12 lg:pb-24">
-    <ul class="mx-auto top-22.75 bg-beige w-full max-w-xxl grid grid-cols-2 divide-primary/40 divide-x text-sm">
-        <li class="ml-auto px-5 lg:px-5 py-10 xxl:px-10">
-            <a href=""
-               title="Trier par titre"
-               class="max-w-max fill-primary text-primary bg-primary lg:fill-white lg:text-white lg:border-none last:border-b-0 border-b border-primary/40 group block text-center font-black font-family-black uppercase tracking-widest p-3 flex items-center justify-between duration-150 hover:bg-primary/40 lg:p-0 lg:pr-4 lg:pt-1.5 lg:pb-1 xl:pr-6 rounded-full aspect-square lg:aspect-auto lg:pl-2 fill-white lg:rounded-xl lg:hover:bg-primary/80 lg:hover:text-white">
+    <h1 class="underline-title"><?php the_title() ?></h1>
+    <div class="bg-beige pb-12 lg:pb-24">
+        <ul class="mx-auto top-22.75 bg-beige w-full max-w-xxl grid grid-cols-2 divide-primary/40 divide-x text-sm">
+            <li class="ml-auto px-5 lg:px-5 py-10 xxl:px-10">
+                <a href=""
+                   title="Afficher en liste"
+                   class="show-list max-w-max fill-primary text-white bg-primary lg:border-none last:border-b-0 border-b border-primary/40 group block text-center font-black font-family-black uppercase tracking-widest p-3 flex items-center justify-between duration-150 hover:bg-primary/40 lg:p-0 lg:pr-4 lg:pt-1.5 lg:pb-1 xl:pr-6 rounded-full aspect-square lg:aspect-auto lg:pl-2 fill-white lg:rounded-xl lg:hover:bg-primary/80 lg:hover:text-white">
                 <span class="rounded-full grid place-content-center w-12.5 aspect-square duration-150 group-hover:fill-white">
                     <svg id="Groupe_205" data-name="Groupe 205" xmlns="http://www.w3.org/2000/svg" width="32.706"
                          height="35.432" viewBox="0 0 32.706 35.432">
@@ -23,14 +23,14 @@
         transform="translate(0 -13.382)"/>
 </svg>
                 </span>
-                <span class="hidden lg:inline-block ml-3">Liste</span>
-            </a>
-        </li>
-        <li class="mr-auto px-5 lg:px-5 py-10 xxl:px-10">
-            <a href=""
-               title="Trier par titre"
-               class="max-w-max bg-beige text-primary bg-primary group block text-center font-black font-family-black uppercase tracking-widest p-3 flex items-center justify-between duration-150 hover:bg-primary/40 lg:p-0 lg:pr-4 lg:pt-1.5 lg:pb-1 xl:pr-6 rounded-full aspect-square lg:aspect-auto  lg:pl-2  fill-white lg:rounded-xl lg:hover:bg-primary/80 lg:hover:text-white">
-                <span class="rounded-full grid place-content-center fill-primary w-12.5 aspect-square duration-150 group-hover:fill-white">
+                    <span class="hidden lg:inline-block ml-3">Liste</span>
+                </a>
+            </li>
+            <li class="mr-auto px-5 lg:px-5 py-10 xxl:px-10">
+                <a href=""
+                   title="Afficher en vignette"
+                   class="show-card max-w-max bg-beige text-primary bg-primary group block text-center font-black font-family-black uppercase tracking-widest p-3 flex items-center justify-between duration-150 hover:bg-primary/40 lg:p-0 lg:pr-4 lg:pt-1.5 lg:pb-1 xl:pr-6 rounded-full aspect-square lg:aspect-auto  lg:pl-2  fill-primary lg:rounded-xl lg:hover:bg-primary/80 lg:hover:text-white">
+                <span class="rounded-full grid place-content-center w-12.5 aspect-square duration-150 group-hover:fill-white">
                    <svg id="Groupe_208" data-name="Groupe 208" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" width="32.171" height="32.149"
                         viewBox="0 0 32.171 32.149">
@@ -49,35 +49,47 @@
     </g>
   </g>
 </svg>
-
                 </span>
-                <span class="hidden lg:inline-block ml-3">Vignettes</span>
-            </a>
-        </li>
-    </ul>
-    <div class="max-w-xxl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 px-5">
-        <?php for ($x = 1; $x <= 8; $x++): ?>
-            <article
-                    class="text-center font-bold font-family-bold relative aspect-card drop-shadow-md md:aspect-auto md:grid md:grid-cols-md-actu md:items-center md:text-left overflow-hidden group bg-white">
-                <img class="h-full w-full object-cover"
-                     src="<?= get_template_directory_uri() . '/resources/images/event/' . $x . '.png' ?>" alt="">
-                <div class="bg-white mx-auto -mt-full absolute bottom-0 z-10 w-full py-8 px-6 md:static">
-                    <time class="text-15px md:text-lg text-primary font-black font-family-black tracking-widest uppercase">
-                        Mercredi 09 février 2022
-                    </time>
-                    <p class="tag mt-4 mb-6 mx-auto md:ml-0">Avant-première</p>
-                    <h2 class="text-lg mb-4">L‘empire du silence</h2>
-                    <p class="text-left text-dark font-light font-family-light  line-clamp-6">Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. At blanditiis dignissimos esse nihil porro praesentium
-                        quibusdam similique vel. Ab architecto dolor dolorum eos sed velit voluptatum. Debitis provident
-                        quidem suscipit!</p>
-                    <p class="block max-w-max mx-auto md:ml-0 font-bold font-family-bold uppercase text-primary text-xs border border-primary px-5 pt-3.5 pb-2.5 group-hover:text-white shadow-set-hover group-hover:shadow-hover duration-150 ease-in tracking-widest mt-5">
-                        Voir l‘évènement</p>
-                    <a href="" title=""
-                       class="absolute block h-full w-full top-0 left-0 group-hover:border-2px group-hover:border-primary focus:outline-none focus:border-2px focus:border-primary"></a>
-                </div>
-            </article>
-        <?php endfor; ?>
+                    <span class="hidden lg:inline-block ml-3">Vignettes</span>
+                </a>
+            </li>
+        </ul>
+        <?php
+        $posts = new WP_Query([
+            'post_type' => 'evenement',
+            'posts_per_page' => 10,
+        ]);
+        if ($posts->have_posts()): ?>
+            <div class="article-wrapper max-w-xxl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 px-5">
+                <?php while ($posts->have_posts()) : $posts->the_post(); ?>
+                    <article class="article-card text-center font-bold font-family-bold relative drop-shadow-md md:aspect-auto md:grid md:grid-cols-md-actu md:items-center md:text-left group bg-white">
+                        <?php if (has_post_thumbnail()): ?>
+                            <?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'md:h-full md:aspect-auto w-full aspect-square object-cover']); ?>
+                        <?php endif; ?>
+                        <div class="bg-white mx-auto py-8 px-6 z-10 md:static">
+                            <?php if (get_field('date')): ?>
+                                <time datetime="<?php the_field('date'); ?>"
+                                      class="text-15px md:text-lg text-primary font-black font-family-black tracking-widest uppercase">
+                                    <?= date_i18n('l, j F Y', strtotime(get_field('date'))); ?>
+                                </time>
+                            <?php endif ?>
+                            <?php if (get_field('tag')): ?>
+                                <p class="tag mt-4 mb-6 mx-auto md:ml-0"><?= get_field('tag'); ?></p>
+                            <?php endif ?>
+                            <h2 class="text-lg mb-4"><?php the_title() ?></h2>
+                            <div class="article-content text-left text-dark font-light font-family-light line-clamp-6">
+                                <?php the_content(); ?>
+                            </div>
+                            <p class="article-cta block max-w-max mx-auto md:ml-0 font-bold font-family-bold uppercase text-primary text-xs border border-primary px-5 pt-3.5 pb-2.5 group-hover:text-white shadow-set-hover group-hover:shadow-hover duration-150 ease-in tracking-widest mt-5">
+                                Voir l‘évènement</p>
+                            <a href="<?php the_permalink(); ?>" title="Voir l‘évènement : <?php the_title() ?> "
+                               class="absolute block h-full w-full top-0 left-0 group-hover:border-2px group-hover:border-primary focus:outline-none focus:border-2px focus:border-primary"></a>
+                        </div>
+                    </article>
+                <?php endwhile; ?>
+            </div>
+        <?php else: ?>
+            <p class="text-center">Aucun évènement disponible</p>
+        <?php endif; ?>
     </div>
-</div>
 <?php get_footer(); ?>

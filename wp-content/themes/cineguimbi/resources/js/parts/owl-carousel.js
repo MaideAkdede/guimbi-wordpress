@@ -8,6 +8,7 @@ $(function () {
     $('.owl-carousel-regular').owlCarousel({
         loop: true,
         nav: true,
+        margin: 20,
         dots: true,
         navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
         responsive: {
