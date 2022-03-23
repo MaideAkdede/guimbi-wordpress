@@ -22,8 +22,8 @@
             this.listBtn.classList.add('bg-beige', 'text-primary', 'fill-primary');
 
             this.cards.forEach((card) => {
-                card.classList.remove('md:aspect-auto', 'md:grid', 'md:grid-cols-md-actu', 'md:items-center', 'md:text-left');
-                card.querySelector('img').classList.remove('md:aspect-auto', 'md:h-full');
+                card.classList.remove('md:aspect-auto', 'md:grid', 'md:grid-cols-md-actu', 'md:items-center', 'md:text-left', 'md:h-full');
+                card.querySelector('div').classList.remove('md:h-full');
             });
         },
         toggleList(e) {
@@ -38,8 +38,8 @@
 
 
             this.cards.forEach((card) => {
-                card.classList.add('md:aspect-auto', 'md:grid', 'md:grid-cols-md-actu', 'md:items-center', 'md:text-left');
-                card.querySelector('img').classList.add('md:aspect-auto', 'md:h-full');
+                card.classList.add('md:aspect-auto', 'md:grid', 'md:grid-cols-md-actu', 'md:items-center', 'md:text-left', 'md:h-full');
+                card.querySelector('div').classList.add('md:h-full');
             });
         },
     }

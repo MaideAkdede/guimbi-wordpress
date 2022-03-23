@@ -71,7 +71,7 @@
                 'menu_class' => 'menu-footer text-light grid grid-cols-2',
                 'li_class' => 'group',
                 'link_class' => 'py-2.5 duration-150 group-hover:text-white block',
-                'submenu_class' => 'hidden',
+                'submenu_class' => 'hidden max-h-[222px] w-max divide-y divide-dark-secondary absolute bg-primary overflow-y-scroll',
                 'fallback_cb' => false,
             ]); ?>
         </nav>

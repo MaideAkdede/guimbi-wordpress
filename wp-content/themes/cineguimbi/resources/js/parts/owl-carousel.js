@@ -1,9 +1,5 @@
 // Owl Carousel 2
-import jquery from "jquery";
-
-$ = jQuery = jquery;
 require("owl.carousel");
-
 $(function () {
     $('.owl-carousel-regular').owlCarousel({
         loop: true,

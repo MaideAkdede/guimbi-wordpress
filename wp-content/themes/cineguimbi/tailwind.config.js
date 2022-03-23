@@ -102,6 +102,7 @@ module.exports = {
                 'size-fontawesome': '1.1875rem',
                 'movie-title':'2.625rem',
                 'hero-title': '1.4375rem',
+                '10px': '0.625rem',
                 '13px': '0.8125rem',
                 '15px': '0.9375rem',
                 '23px': '1.4375rem',
@@ -163,9 +164,10 @@ module.exports = {
                 '3/2':'3 / 2'
             },
             gridTemplateColumns: {
-                'md-actu': '1fr 1fr',
+                'md-actu': '1fr 2fr',
                 'movie': '3fr 1fr 2fr 4fr',
-                'movie-lg': '1fr 134px 1fr',
+                'movie-lg': '1fr 1fr minmax(auto, 750px)',
+                'movie-cast-grid': 'minmax(max-content, 1fr) 2fr',
                 'movie-cast': '1fr 2fr',
                 '2-2fr-1fr': '2fr 1fr',
                 '2-auto-1fr': 'auto 1fr',
@@ -173,6 +175,10 @@ module.exports = {
                 'seance': '1fr 2fr auto',
                 'movie-info': '7fr 1fr 3fr',
             },
+            gridTemplateRows:{
+                'max-height':'minmax(1fr, 300px)'
+            }
+            ,
             boxShadow: {
                 'custom': '0 0 10px rgba(0, 0, 0, 0.1)',
                 'set-hover':'inset 0 0 0 0.01rem transparent',

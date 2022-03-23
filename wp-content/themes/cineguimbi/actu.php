@@ -17,10 +17,10 @@
                             <?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'md:h-full md:aspect-auto w-full aspect-square object-cover']); ?>
                         <?php endif; ?>
                         <div class="bg-white mx-auto py-8 px-6 z-10 md:static">
-                            <?php if (get_the_date()): ?>
-                                <time datetime="<?php the_field('date'); ?>"
+                            <?php if (get_the_date() != null): ?>
+                                <time datetime="<?= get_the_date('Y-m-d'); ?>"
                                       class="text-15px text-primary font-black font-family-black tracking-widest uppercase">
-                                    <?= date_i18n('l, j F Y', strtotime(get_the_date())); ?>
+                                    <?= get_the_date('l, j F Y'); ?>
                                 </time>
                             <?php endif ?>
                             <h2 class="text-lg my-4"><?php the_title() ?></h2>

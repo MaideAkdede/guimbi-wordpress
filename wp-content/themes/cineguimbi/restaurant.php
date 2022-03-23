@@ -17,14 +17,34 @@
     </div>
 <?php if (have_rows('restaurant_slider')): ?>
     <div class="max-w-xxl mx-auto py-12">
-        <h2 class="px-5 font-family-black font-extrabold tracking-widest uppercase text-xl md:text-25px text-center mt-11 md:mt-20 mb-8 md:mb-10 after:block after:h-[6px] after:w-12 after:bg-primary after:rounded-full after:mx-auto after:-rotate-3 after:mt-1 md:text-left lg:after:ml-0 lg:text-black text-lg">
+        <h2 class="px-5 font-family-black font-extrabold tracking-widest uppercase text-xl md:text-25px text-center mt-11 md:mt-20 mb-8 md:mb-10 after:block after:h-[6px] after:w-12 after:bg-primary after:rounded-full after:mx-auto after:-rotate-3 after:mt-1 md:text-left md:after:ml-0 lg:text-black text-lg">
             Images du restaurant</h2>
         <ul class="owl-carousel-regular owl-carousel owl-theme">
             <?php while (have_rows('restaurant_slider')): the_row(); ?>
-                <a href="<?= get_sub_field('photo')['url']; ?>" class="block overflow-hidden aspect-square" data-fancybox="gallery">
+                <a href="<?= get_sub_field('photo')['url']; ?>" class="block overflow-hidden aspect-square"
+                   data-fancybox="gallery">
                     <img src="<?= get_sub_field('photo')['url']; ?>" alt="" class="h-full w-full object-cover">
                 </a>
             <?php endwhile; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+<?php
+$images = get_field('gallery');
+if ($images): ?>
+    <div class="max-w-xxl mx-auto py-12">
+        <h2 class="px-5 font-family-black font-extrabold tracking-widest uppercase text-xl md:text-25px text-center mt-11 md:mt-20 mb-8 md:mb-10 after:block after:h-[6px] after:w-12 after:bg-primary after:rounded-full after:mx-auto after:-rotate-3 after:mt-1 md:text-left md:after:ml-0 lg:text-black text-lg">
+            Images du restaurant</h2>
+        <ul class="owl-carousel-regular owl-carousel owl-theme">
+            <?php foreach ($images as $image): ?>
+                <li>
+                    <a href="<?= esc_url($image['url']); ?>" class="block overflow-hidden aspect-square"
+                       data-fancybox="gallery">
+                        <img src="<?= esc_url($image['sizes']['thumbnail']); ?>" alt="<?= esc_attr($image['alt']); ?>"
+                             class="h-full w-full object-cover"/>
+                    </a>
+                </li>
+            <?php endforeach; ?>
         </ul>
     </div>
 <?php endif; ?>

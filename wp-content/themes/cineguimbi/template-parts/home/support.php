@@ -9,7 +9,7 @@
             <?php if( $i > 4 ): ?>
                 <?php break; ?>
             <?php endif; ?>
-            <figure class="max-h-[71px] relative mb-8 duration-150 grayscale hover:grayscale-0">
+            <figure class="max-h-[71px] relative mb-8 duration-150 grayscale hover:grayscale-0 hover:opacity-100 opacity-40">
                 <img class=" hover: h-full w-full object-contain"
                      src="<?= get_sub_field('logo')['url']; ?>"
                      alt="<?= get_sub_field('logo')['alt']; ?>">

@@ -62,11 +62,13 @@
         if ($posts->have_posts()): ?>
             <div class="article-wrapper max-w-xxl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 px-5">
                 <?php while ($posts->have_posts()) : $posts->the_post(); ?>
-                    <article class="article-card text-center font-bold font-family-bold relative drop-shadow-md md:aspect-auto md:grid md:grid-cols-md-actu md:items-center md:text-left group bg-white">
+                    <article class="article-card text-center font-bold font-family-bold relative drop-shadow-md md:grid md:grid-cols-md-actu md:items-center md:text-left group bg-white">
                         <?php if (has_post_thumbnail()): ?>
-                            <?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'md:h-full md:aspect-auto w-full aspect-square object-cover']); ?>
+                        <div class="overflow-hidden aspect-square md:h-full md:w-full">
+                            <?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'w-full h-full object-cover']); ?>
+                        </div>
                         <?php endif; ?>
-                        <div class="bg-white mx-auto py-8 px-6 z-10 md:static">
+                        <div class="bg-white py-8 px-6 z-10">
                             <?php if (get_field('date')): ?>
                                 <time datetime="<?php the_field('date'); ?>"
                                       class="text-15px md:text-lg text-primary font-black font-family-black tracking-widest uppercase">
@@ -77,8 +79,8 @@
                                 <p class="tag mt-4 mb-6 mx-auto md:ml-0"><?= get_field('tag'); ?></p>
                             <?php endif ?>
                             <h2 class="text-lg mb-4"><?php the_title() ?></h2>
-                            <div class="article-content text-left text-dark font-light font-family-light line-clamp-6">
-                                <?php the_content(); ?>
+                            <div class="article-content text-left text-dark font-light font-family-light line-clamp-3">
+                                <?= get_the_content(); ?>
                             </div>
                             <p class="article-cta block max-w-max mx-auto md:ml-0 font-bold font-family-bold uppercase text-primary text-xs border border-primary px-5 pt-3.5 pb-2.5 group-hover:text-white shadow-set-hover group-hover:shadow-hover duration-150 ease-in tracking-widest mt-5">
                                 Voir l‘évènement</p>

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+    <!--FAV ICONS-->
+        <link rel="icon" href="<?php echo get_template_directory_uri() . '/resources/images/logo/1x/2.png' ?>" sizes="any"><!-- 32×32 -->
+        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() . '/resources/images/logo/1x/big.png' ?>"><!-- 180×180 -->
+        <link rel="manifest" href="/manifest.webmanifest">
+    <!--END FAV ICONS-->
     <?php wp_head(); ?>
 </head>
 
